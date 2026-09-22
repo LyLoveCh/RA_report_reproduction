@@ -1,11 +1,10 @@
-# RepairAgent 课程复现（拷到 `E:\report_reproduct`）
+# RepairAgent 课程复现
 
 面向 ICSE 2025 论文
 **RepairAgent: An Autonomous, LLM-Based Agent for Program Repair**
 （DOI `10.1109/ICSE55347.2025.00157`，仓库 [https://github.com/sola-st/RepairAgent](https://github.com/sola-st/RepairAgent）)
 
-这是**课程报告用的本地可跑材料**，不是会议记录 App 的功能。把本文件夹整份放到 `E:\report_reproduct` 即可。
-
+这是**课程报告用的本地可跑材料**，
 ## 课上演示什么（$0）
 
 APR = 自动写补丁，用测试证明从红变绿。本目录演示 **Defects4J Chart-1**：
@@ -21,11 +20,11 @@ APR = 自动写补丁，用测试证明从红变绿。本目录演示 **Defects4
 
 **不要**花 835 个 bug 的 API 钱，也**不要**跑 GitBug-Java（约 140GB）。
 
-## Windows（你的笔记本）一键
+环境：
 
 需要：Python 3.10+（勾选 Add to PATH）、Git。
 
-在 `E:\report_reproduct` 打开 PowerShell：
+打开 PowerShell：
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\run_all.ps1
