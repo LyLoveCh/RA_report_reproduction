@@ -90,7 +90,7 @@ RepairAgent 测绿、循环没绿：Lang 23、Collections 21、Jsoup 48、Jsoup 
 
 ## 结果
 
-数字底稿：[`evidence/compare_sample10/RESULTS.md`](evidence/compare_sample10/RESULTS.md)、[`TOOLS.md`](evidence/compare_sample10/TOOLS.md)。一页总览：[`compare.html`](evidence/compare_sample10/compare.html)。
+数字底稿：[`evidence/compare_sample10/RESULTS.md`](evidence/compare_sample10/RESULTS.md)、[`TOOLS.md`](evidence/compare_sample10/TOOLS.md)。一页总览：[`compare.html`](evidence/compare_sample10/compare.html)。和论文结果的类比：[`PAPER_COMPARISON.md`](evidence/compare_sample10/PAPER_COMPARISON.md)。
 
 ### Chart-1 冒烟
 
