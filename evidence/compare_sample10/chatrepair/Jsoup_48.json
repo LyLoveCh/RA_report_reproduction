@@ -1,0 +1,180 @@
+{
+  "bug": "Jsoup 48",
+  "plausible": false,
+  "model": "deepseek-chat",
+  "triggering_tests": [
+    "org.jsoup.helper.HttpConnectionTest::sameHeadersCombineWithComma"
+  ],
+  "rounds": 12,
+  "seconds": 40.9,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/helper/HttpConnection.java",
+          "action": "replace",
+          "line": 773,
+          "text": "                    if (!values.isEmpty())\n                        header(name, StringUtil.join(values, \", \"));"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/helper/HttpConnection.java#773",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/helper/HttpConnection.java\",\"action\":\"replace\",\"line\":773,\"text\":\"                    if (!values.isEmpty())\\n                        header(name, StringUtil.join(values, \\\", \\\"));\"}]}"
+    },
+    {
+      "round": 2,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/helper/HttpConnection.java",
+          "action": "replace",
+          "line": 773,
+          "text": "                    if (!values.isEmpty())\n                        header(name, StringUtil.join(values, \", \"));"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/helper/HttpConnection.java#773",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/helper/HttpConnection.java\",\"action\":\"replace\",\"line\":773,\"text\":\"                    if (!values.isEmpty())\\n                        header(name, StringUtil.join(values, \\\", \\\"));\"}]}"
+    },
+    {
+      "round": 3,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/helper/HttpConnection.java",
+          "action": "replace",
+          "line": 773,
+          "text": "                    if (!values.isEmpty())\n                        header(name, values.get(0));\n                    for (int j = 1; j < values.size(); j++)\n                        header(name, header(name) + \", \" + values.get(j));"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/helper/HttpConnection.java#773",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/helper/HttpConnection.java\",\"action\":\"replace\",\"line\":773,\"text\":\"                    if (!values.isEmpty())\\n                        header(name, values.get(0));\\n                    for (int j = 1; j < values.size(); j++)\\n                        header(name, header(name) + \\\", \\\" + values.get(j));\"}]}"
+    },
+    {
+      "round": 4,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/helper/HttpConnection.java",
+          "action": "replace",
+          "line": 773,
+          "text": "                    if (!values.isEmpty())\n                        header(name, values.get(0));\n                    for (int j = 1; j < values.size(); j++)\n                        header(name, header(name) + \", \" + values.get(j));"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/helper/HttpConnection.java#773",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/helper/HttpConnection.java\",\"action\":\"replace\",\"line\":773,\"text\":\"                    if (!values.isEmpty())\\n                        header(name, values.get(0));\\n                    for (int j = 1; j < values.size(); j++)\\n                        header(name, header(name) + \\\", \\\" + values.get(j));\"}]}"
+    },
+    {
+      "round": 5,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/helper/HttpConnection.java",
+          "action": "replace",
+          "line": 773,
+          "text": "                    if (!values.isEmpty())\n                        header(name, values.get(0));\n                    for (int j = 1; j < values.size(); j++)\n                        header(name, header(name) + \", \" + values.get(j));"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/helper/HttpConnection.java#773",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/helper/HttpConnection.java\",\"action\":\"replace\",\"line\":773,\"text\":\"                    if (!values.isEmpty())\\n                        header(name, values.get(0));\\n                    for (int j = 1; j < values.size(); j++)\\n                        header(name, header(name) + \\\", \\\" + values.get(j));\"}]}"
+    },
+    {
+      "round": 6,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/helper/HttpConnection.java",
+          "action": "replace",
+          "line": 773,
+          "text": "                    if (!values.isEmpty())\n                        header(name, values.get(0));\n                    for (int j = 1; j < values.size(); j++)\n                        header(name, header(name) + \", \" + values.get(j));"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/helper/HttpConnection.java#773",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/helper/HttpConnection.java\",\"action\":\"replace\",\"line\":773,\"text\":\"                    if (!values.isEmpty())\\n                        header(name, values.get(0));\\n                    for (int j = 1; j < values.size(); j++)\\n                        header(name, header(name) + \\\", \\\" + values.get(j));\"}]}"
+    },
+    {
+      "round": 7,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/helper/HttpConnection.java",
+          "action": "replace",
+          "line": 773,
+          "text": "                    if (!values.isEmpty())\n                        header(name, values.get(0));\n                    for (int j = 1; j < values.size(); j++)\n                        header(name, header(name) + \", \" + values.get(j));"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/helper/HttpConnection.java#773",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/helper/HttpConnection.java\",\"action\":\"replace\",\"line\":773,\"text\":\"                    if (!values.isEmpty())\\n                        header(name, values.get(0));\\n                    for (int j = 1; j < values.size(); j++)\\n                        header(name, header(name) + \\\", \\\" + values.get(j));\"}]}"
+    },
+    {
+      "round": 8,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/helper/HttpConnection.java",
+          "action": "replace",
+          "line": 773,
+          "text": "                    if (!values.isEmpty())\n                        header(name, values.get(0));\n                    for (int j = 1; j < values.size(); j++)\n                        header(name, header(name) + \", \" + values.get(j));"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/helper/HttpConnection.java#773",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/helper/HttpConnection.java\",\"action\":\"replace\",\"line\":773,\"text\":\"                    if (!values.isEmpty())\\n                        header(name, values.get(0));\\n                    for (int j = 1; j < values.size(); j++)\\n                        header(name, header(name) + \\\", \\\" + values.get(j));\"}]}"
+    },
+    {
+      "round": 9,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/helper/HttpConnection.java",
+          "action": "replace",
+          "line": 773,
+          "text": "                    if (!values.isEmpty())\n                        header(name, values.get(0));\n                    for (int j = 1; j < values.size(); j++)\n                        header(name, header(name) + \", \" + values.get(j));"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/helper/HttpConnection.java#773",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/helper/HttpConnection.java\",\"action\":\"replace\",\"line\":773,\"text\":\"                    if (!values.isEmpty())\\n                        header(name, values.get(0));\\n                    for (int j = 1; j < values.size(); j++)\\n                        header(name, header(name) + \\\", \\\" + values.get(j));\"}]}"
+    },
+    {
+      "round": 10,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/helper/HttpConnection.java",
+          "action": "replace",
+          "line": 773,
+          "text": "                    if (!values.isEmpty())\n                        header(name, values.get(0));\n                    for (int j = 1; j < values.size(); j++)\n                        header(name, header(name) + \", \" + values.get(j));"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/helper/HttpConnection.java#773",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/helper/HttpConnection.java\",\"action\":\"replace\",\"line\":773,\"text\":\"                    if (!values.isEmpty())\\n                        header(name, values.get(0));\\n                    for (int j = 1; j < values.size(); j++)\\n                        header(name, header(name) + \\\", \\\" + values.get(j));\"}]}"
+    },
+    {
+      "round": 11,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/helper/HttpConnection.java",
+          "action": "replace",
+          "line": 773,
+          "text": "                    if (!values.isEmpty())\n                        header(name, values.get(0));\n                    for (int j = 1; j < values.size(); j++)\n                        header(name, header(name) + \", \" + values.get(j));"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/helper/HttpConnection.java#773",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/helper/HttpConnection.java\",\"action\":\"replace\",\"line\":773,\"text\":\"                    if (!values.isEmpty())\\n                        header(name, values.get(0));\\n                    for (int j = 1; j < values.size(); j++)\\n                        header(name, header(name) + \\\", \\\" + values.get(j));\"}]}"
+    },
+    {
+      "round": 12,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/helper/HttpConnection.java",
+          "action": "replace",
+          "line": 773,
+          "text": "                    if (!values.isEmpty())\n                        header(name, values.get(0));\n                    for (int j = 1; j < values.size(); j++)\n                        header(name, header(name) + \", \" + values.get(j));"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/helper/HttpConnection.java#773",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/helper/HttpConnection.java\",\"action\":\"replace\",\"line\":773,\"text\":\"                    if (!values.isEmpty())\\n                        header(name, values.get(0));\\n                    for (int j = 1; j < values.size(); j++)\\n                        header(name, header(name) + \\\", \\\" + values.get(j));\"}]}"
+    }
+  ]
+}

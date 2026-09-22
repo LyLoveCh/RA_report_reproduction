@@ -1,0 +1,180 @@
+{
+  "bug": "Jsoup 5",
+  "plausible": false,
+  "model": "deepseek-chat",
+  "triggering_tests": [
+    "org.jsoup.parser.ParserTest::parsesQuiteRoughAttributes"
+  ],
+  "rounds": 12,
+  "seconds": 30.8,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/parser/Parser.java",
+          "action": "replace",
+          "line": 206,
+          "text": "            if (!tq.isEmpty()) tq.consume();"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/parser/Parser.java#206",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/parser/Parser.java\",\"action\":\"replace\",\"line\":206,\"text\":\"            if (!tq.isEmpty()) tq.consume();\"}]}"
+    },
+    {
+      "round": 2,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/parser/Parser.java",
+          "action": "replace",
+          "line": 206,
+          "text": "            if (!tq.isEmpty()) tq.consume();\n            else return null;"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/parser/Parser.java#206",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/parser/Parser.java\",\"action\":\"replace\",\"line\":206,\"text\":\"            if (!tq.isEmpty()) tq.consume();\\n            else return null;\"}]}"
+    },
+    {
+      "round": 3,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/parser/Parser.java",
+          "action": "replace",
+          "line": 206,
+          "text": "            if (!tq.isEmpty())\n                tq.consume();"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/parser/Parser.java#206",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/parser/Parser.java\",\"action\":\"replace\",\"line\":206,\"text\":\"            if (!tq.isEmpty())\\n                tq.consume();\"}]}"
+    },
+    {
+      "round": 4,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/parser/Parser.java",
+          "action": "replace",
+          "line": 206,
+          "text": "            if (!tq.isEmpty())\n                tq.consume();\n            return null;"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/parser/Parser.java#206",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/parser/Parser.java\",\"action\":\"replace\",\"line\":206,\"text\":\"            if (!tq.isEmpty())\\n                tq.consume();\\n            return null;\"}]}"
+    },
+    {
+      "round": 5,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/parser/Parser.java",
+          "action": "replace",
+          "line": 206,
+          "text": "            if (!tq.isEmpty())\n                tq.consume();"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/parser/Parser.java#206",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/parser/Parser.java\",\"action\":\"replace\",\"line\":206,\"text\":\"            if (!tq.isEmpty())\\n                tq.consume();\"}]}"
+    },
+    {
+      "round": 6,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/parser/Parser.java",
+          "action": "replace",
+          "line": 206,
+          "text": "            if (!tq.isEmpty())\n                tq.consume();\n            return null;"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/parser/Parser.java#206",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/parser/Parser.java\",\"action\":\"replace\",\"line\":206,\"text\":\"            if (!tq.isEmpty())\\n                tq.consume();\\n            return null;\"}]}"
+    },
+    {
+      "round": 7,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/parser/Parser.java",
+          "action": "replace",
+          "line": 206,
+          "text": "            if (!tq.isEmpty())\n                tq.consume();\n            else\n                return null;"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/parser/Parser.java#206",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/parser/Parser.java\",\"action\":\"replace\",\"line\":206,\"text\":\"            if (!tq.isEmpty())\\n                tq.consume();\\n            else\\n                return null;\"}]}"
+    },
+    {
+      "round": 8,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/parser/Parser.java",
+          "action": "replace",
+          "line": 206,
+          "text": "            if (!tq.isEmpty())\n                tq.consume();\n            return null;"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/parser/Parser.java#206",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/parser/Parser.java\",\"action\":\"replace\",\"line\":206,\"text\":\"            if (!tq.isEmpty())\\n                tq.consume();\\n            return null;\"}]}"
+    },
+    {
+      "round": 9,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/parser/Parser.java",
+          "action": "replace",
+          "line": 206,
+          "text": "            if (!tq.isEmpty())\n                tq.consume();\n            else\n                return null;"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/parser/Parser.java#206",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/parser/Parser.java\",\"action\":\"replace\",\"line\":206,\"text\":\"            if (!tq.isEmpty())\\n                tq.consume();\\n            else\\n                return null;\"}]}"
+    },
+    {
+      "round": 10,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/parser/Parser.java",
+          "action": "replace",
+          "line": 206,
+          "text": "            if (!tq.isEmpty())\n                tq.consume();\n            return null;"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/parser/Parser.java#206",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/parser/Parser.java\",\"action\":\"replace\",\"line\":206,\"text\":\"            if (!tq.isEmpty())\\n                tq.consume();\\n            return null;\"}]}"
+    },
+    {
+      "round": 11,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/parser/Parser.java",
+          "action": "replace",
+          "line": 206,
+          "text": "            if (!tq.isEmpty())\n                tq.consume();\n            else\n                return null;"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/parser/Parser.java#206",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/parser/Parser.java\",\"action\":\"replace\",\"line\":206,\"text\":\"            if (!tq.isEmpty())\\n                tq.consume();\\n            else\\n                return null;\"}]}"
+    },
+    {
+      "round": 12,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/parser/Parser.java",
+          "action": "replace",
+          "line": 206,
+          "text": "            if (!tq.isEmpty())\n                tq.consume();\n            return null;"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/parser/Parser.java#206",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/parser/Parser.java\",\"action\":\"replace\",\"line\":206,\"text\":\"            if (!tq.isEmpty())\\n                tq.consume();\\n            return null;\"}]}"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+Closure 19
+Closure 38
+Closure 97
+JacksonDatabind 69
+JacksonDatabind 99
+Lang 23
+Math 4
+Math 83
+Mockito 9
+Mockito 24

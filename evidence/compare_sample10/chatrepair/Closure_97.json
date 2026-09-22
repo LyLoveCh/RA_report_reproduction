@@ -1,0 +1,27 @@
+{
+  "bug": "Closure 97",
+  "plausible": true,
+  "triggering_tests": [
+    "com.google.javascript.jscomp.PeepholeFoldConstantsTest::testFoldBitShifts"
+  ],
+  "rounds": 1,
+  "seconds": 32.6,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "com/google/javascript/jscomp/PeepholeFoldConstants.java",
+          "action": "replace",
+          "line": 698,
+          "text": "          result = (lvalInt >>> rvalInt) & 0xFFFFFFFFL;"
+        }
+      ],
+      "apply": "replace src/com/google/javascript/jscomp/PeepholeFoldConstants.java#698",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"com/google/javascript/jscomp/PeepholeFoldConstants.java\",\"action\":\"replace\",\"line\":698,\"text\":\"          result = (lvalInt >>> rvalInt) & 0xFFFFFFFFL;\"}]}",
+      "full_pass": true,
+      "full_log_tail": "Failing tests: 0\n\nRunning ant (compile.tests)................................................ OK\nRunning ant (run.dev.tests)................................................ OK\n\n"
+    }
+  ]
+}

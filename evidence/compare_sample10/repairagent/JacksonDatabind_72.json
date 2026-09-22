@@ -1,0 +1,7 @@
+{
+  "bug": "JacksonDatabind 72",
+  "exp": "experiment_22",
+  "plausible": true,
+  "rounds": 10,
+  "goals_accomplished": true
+}

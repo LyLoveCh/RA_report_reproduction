@@ -1,0 +1,5 @@
+# Enough to run this folder's own demos (Chart-1 mini + apply_patch).
+# Official RepairAgent tests additionally install repair_agent/requirements-dev.txt.
+pytest>=8.0
+fuzzywuzzy
+python-dotenv

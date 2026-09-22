@@ -1,0 +1,8 @@
+{
+  "bug": "Collections 21",
+  "exp": "experiment_30",
+  "plausible": true,
+  "rounds": 7,
+  "goals_accomplished": true,
+  "note": "第一次缺 Collections-21.buggy.lines 早停；补 FL 后 experiment_30 于 7 轮测绿，goals_accomplished=true。"
+}

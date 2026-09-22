@@ -1,0 +1,28 @@
+{
+  "bug": "Jsoup 41",
+  "plausible": true,
+  "model": "deepseek-chat",
+  "triggering_tests": [
+    "org.jsoup.nodes.ElementTest::testHashAndEquals"
+  ],
+  "rounds": 1,
+  "seconds": 10.1,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "src/main/java/org/jsoup/nodes/Element.java",
+          "action": "replace",
+          "line": 1175,
+          "text": "        return tag.equals(element.tag);"
+        }
+      ],
+      "apply": "replace src/main/java/org/jsoup/nodes/Element.java#1175",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/jsoup/nodes/Element.java\",\"action\":\"replace\",\"line\":1175,\"text\":\"        return tag.equals(element.tag);\"}]}",
+      "full_pass": true,
+      "full_log_tail": "Failing tests: 0\n\nRunning ant (compile.tests)................................................ OK\nRunning ant (run.dev.tests)................................................ OK\n\n"
+    }
+  ]
+}

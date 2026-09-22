@@ -1,0 +1,426 @@
+{
+  "bug": "Lang 35",
+  "plausible": false,
+  "model": "deepseek-chat",
+  "triggering_tests": [
+    "org.apache.commons.lang3.ArrayUtilsAddTest::testLANG571"
+  ],
+  "rounds": 12,
+  "seconds": 44.0,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3295,
+          "text": "            type = Object[].class;"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3295",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3295,\"text\":\"            type = Object[].class;\"}]}"
+    },
+    {
+      "round": 2,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3295,
+          "text": "            type = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3298,
+          "text": "        T[] newArray = (T[]) copyArrayGrow1(array, type == Object.class ? Object.class : type);"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3295; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3298",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3295,\"text\":\"            type = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3298,\"text\":\"        T[] newArray = (T[]) copyArrayGrow1(array, type == Object.class ? Object.class : type);\"}]}"
+    },
+    {
+      "round": 3,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3295,
+          "text": "            type = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3298,
+          "text": "        T[] newArray = (T[]) copyArrayGrow1(array, type);"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3295; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3298",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3295,\"text\":\"            type = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3298,\"text\":\"        T[] newArray = (T[]) copyArrayGrow1(array, type);\"}]}"
+    },
+    {
+      "round": 4,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3295,
+          "text": "            type = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3298,
+          "text": "        T[] newArray = (T[]) copyArrayGrow1(array, type);"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3574,
+          "text": "            return (T[]) new Object[] { null };"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3295; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3298; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3574",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3295,\"text\":\"            type = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3298,\"text\":\"        T[] newArray = (T[]) copyArrayGrow1(array, type);\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3574,\"text\":\"            return (T[]) new Object[] { null };\"}]}"
+    },
+    {
+      "round": 5,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3295,
+          "text": "            type = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3298,
+          "text": "        T[] newArray = (T[]) copyArrayGrow1(array, type);"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3574,
+          "text": "            return (T[]) new Object[] { null };"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "insert_after",
+          "line": 3296,
+          "text": "        if (type == Object.class) {\n            type = Object[].class;\n        }"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3295; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3298; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3574; insert_after src/main/java/org/apache/commons/lang3/ArrayUtils.java#3296",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3295,\"text\":\"            type = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3298,\"text\":\"        T[] newArray = (T[]) copyArrayGrow1(array, type);\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3574,\"text\":\"            return (T[]) new Object[] { null };\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"insert_after\",\"line\":3296,\"text\":\"        if (type == Object.class) {\\n            type = Object[].class;\\n        }\"}]}"
+    },
+    {
+      "round": 6,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3295,
+          "text": "            type = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3298,
+          "text": "        T[] newArray = (T[]) copyArrayGrow1(array, type);"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3574,
+          "text": "            return (T[]) new Object[] { null };"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "insert_after",
+          "line": 3296,
+          "text": "        if (type == Object.class) {\n            type = Object[].class;\n        }"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3572,
+          "text": "            clss = Object.class;"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3295; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3298; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3574; insert_after src/main/java/org/apache/commons/lang3/ArrayUtils.java#3296; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3572",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3295,\"text\":\"            type = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3298,\"text\":\"        T[] newArray = (T[]) copyArrayGrow1(array, type);\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3574,\"text\":\"            return (T[]) new Object[] { null };\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"insert_after\",\"line\":3296,\"text\":\"        if (type == Object.class) {\\n            type = Object[].class;\\n        }\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3572,\"text\":\"            clss = Object.class;\"}]}"
+    },
+    {
+      "round": 7,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3295,
+          "text": "            type = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3298,
+          "text": "        T[] newArray = (T[]) copyArrayGrow1(array, type);"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3574,
+          "text": "            return (T[]) new Object[] { null };"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3572,
+          "text": "            clss = Object.class;"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3295; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3298; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3574; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3572",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3295,\"text\":\"            type = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3298,\"text\":\"        T[] newArray = (T[]) copyArrayGrow1(array, type);\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3574,\"text\":\"            return (T[]) new Object[] { null };\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3572,\"text\":\"            clss = Object.class;\"}]}"
+    },
+    {
+      "round": 8,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3295,
+          "text": "            type = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3298,
+          "text": "        T[] newArray = (T[]) copyArrayGrow1(array, type);"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3574,
+          "text": "            return (T[]) new Object[] { null };"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3572,
+          "text": "            clss = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "insert_after",
+          "line": 3296,
+          "text": "        if (type == Object.class) {\n            type = Object[].class;\n        }"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3295; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3298; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3574; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3572; insert_after src/main/java/org/apache/commons/lang3/ArrayUtils.java#3296",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3295,\"text\":\"            type = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3298,\"text\":\"        T[] newArray = (T[]) copyArrayGrow1(array, type);\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3574,\"text\":\"            return (T[]) new Object[] { null };\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3572,\"text\":\"            clss = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"insert_after\",\"line\":3296,\"text\":\"        if (type == Object.class) {\\n            type = Object[].class;\\n        }\"}]}"
+    },
+    {
+      "round": 9,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3295,
+          "text": "            type = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3298,
+          "text": "        T[] newArray = (T[]) copyArrayGrow1(array, type);"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3574,
+          "text": "            return (T[]) new Object[] { null };"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3572,
+          "text": "            clss = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "insert_after",
+          "line": 3296,
+          "text": "        if (type == Object.class) {\n            type = Object[].class;\n        }"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "insert_after",
+          "line": 3573,
+          "text": "            clss = Object[].class;"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3295; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3298; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3574; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3572; insert_after src/main/java/org/apache/commons/lang3/ArrayUtils.java#3296; insert_after src/main/java/org/apache/commons/lang3/ArrayUtils.java#3573",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3295,\"text\":\"            type = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3298,\"text\":\"        T[] newArray = (T[]) copyArrayGrow1(array, type);\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3574,\"text\":\"            return (T[]) new Object[] { null };\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3572,\"text\":\"            clss = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"insert_after\",\"line\":3296,\"text\":\"        if (type == Object.class) {\\n            type = Object[].class;\\n        }\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"insert_after\",\"line\":3573,\"text\":\"            clss = Object[].class;\"}]}"
+    },
+    {
+      "round": 10,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3295,
+          "text": "            type = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3298,
+          "text": "        T[] newArray = (T[]) copyArrayGrow1(array, type);"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3574,
+          "text": "            return (T[]) new Object[] { null };"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3572,
+          "text": "            clss = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "insert_after",
+          "line": 3296,
+          "text": "        if (type == Object.class) {\n            type = Object[].class;\n        }"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "insert_after",
+          "line": 3573,
+          "text": "            clss = Object[].class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3577,
+          "text": "        final T[] newArray = (T[]) add(array, index, element, clss);"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3295; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3298; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3574; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3572; insert_after src/main/java/org/apache/commons/lang3/ArrayUtils.java#3296; insert_after src/main/java/org/apache/commons/lang3/ArrayUtils.java#3573; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3577",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3295,\"text\":\"            type = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3298,\"text\":\"        T[] newArray = (T[]) copyArrayGrow1(array, type);\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3574,\"text\":\"            return (T[]) new Object[] { null };\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3572,\"text\":\"            clss = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"insert_after\",\"line\":3296,\"text\":\"        if (type == Object.class) {\\n            type = Object[].class;\\n        }\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"insert_after\",\"line\":3573,\"text\":\"            clss = Object[].class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3577,\"text\":\"        final T[] newArray = (T[]) add(array, index, element, clss);\"}]}"
+    },
+    {
+      "round": 11,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3295,
+          "text": "            type = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3298,
+          "text": "        T[] newArray = (T[]) copyArrayGrow1(array, type);"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3574,
+          "text": "            return (T[]) new Object[] { null };"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3572,
+          "text": "            clss = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "insert_after",
+          "line": 3296,
+          "text": "        if (type == Object.class) {\n            type = Object[].class;\n        }"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "insert_after",
+          "line": 3573,
+          "text": "            clss = Object[].class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3577,
+          "text": "        final T[] newArray = (T[]) add(array, index, element, clss);"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3295; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3298; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3574; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3572; insert_after src/main/java/org/apache/commons/lang3/ArrayUtils.java#3296; insert_after src/main/java/org/apache/commons/lang3/ArrayUtils.java#3573; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3577",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3295,\"text\":\"            type = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3298,\"text\":\"        T[] newArray = (T[]) copyArrayGrow1(array, type);\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3574,\"text\":\"            return (T[]) new Object[] { null };\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3572,\"text\":\"            clss = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"insert_after\",\"line\":3296,\"text\":\"        if (type == Object.class) {\\n            type = Object[].class;\\n        }\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"insert_after\",\"line\":3573,\"text\":\"            clss = Object[].class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3577,\"text\":\"        final T[] newArray = (T[]) add(array, index, element, clss);\"}]}"
+    },
+    {
+      "round": 12,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3295,
+          "text": "            type = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3298,
+          "text": "        T[] newArray = (T[]) copyArrayGrow1(array, type);"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3574,
+          "text": "            return (T[]) new Object[] { null };"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3572,
+          "text": "            clss = Object.class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "insert_after",
+          "line": 3296,
+          "text": "        if (type == Object.class) {\n            type = Object[].class;\n        }"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "insert_after",
+          "line": 3573,
+          "text": "            clss = Object[].class;"
+        },
+        {
+          "file": "org/apache/commons/lang3/ArrayUtils.java",
+          "action": "replace",
+          "line": 3577,
+          "text": "        final T[] newArray = (T[]) add(array, index, element, clss);"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3295; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3298; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3574; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3572; insert_after src/main/java/org/apache/commons/lang3/ArrayUtils.java#3296; insert_after src/main/java/org/apache/commons/lang3/ArrayUtils.java#3573; replace src/main/java/org/apache/commons/lang3/ArrayUtils.java#3577",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3295,\"text\":\"            type = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3298,\"text\":\"        T[] newArray = (T[]) copyArrayGrow1(array, type);\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3574,\"text\":\"            return (T[]) new Object[] { null };\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3572,\"text\":\"            clss = Object.class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"insert_after\",\"line\":3296,\"text\":\"        if (type == Object.class) {\\n            type = Object[].class;\\n        }\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"insert_after\",\"line\":3573,\"text\":\"            clss = Object[].class;\"},{\"file\":\"org/apache/commons/lang3/ArrayUtils.java\",\"action\":\"replace\",\"line\":3577,\"text\":\"        final T[] newArray = (T[]) add(array, index, element, clss);\"}]}"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "bug": "Math 83",
+  "plausible": true,
+  "triggering_tests": [
+    "org.apache.commons.math.optimization.linear.SimplexSolverTest::testMath286"
+  ],
+  "rounds": 2,
+  "seconds": 25.8,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "src/main/java/org/apache/commons/math/optimization/linear/SimplexTableau.java",
+          "action": "replace",
+          "line": 292,
+          "text": "        int start = ignoreObjectiveRows ? getNumObjectiveFunctions() : 0;"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/math/optimization/linear/SimplexTableau.java#292",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/apache/commons/math/optimization/linear/SimplexTableau.java\",\"action\":\"replace\",\"line\":292,\"text\":\"        int start = ignoreObjectiveRows ? getNumObjectiveFunctions() : 0;\"}]}"
+    },
+    {
+      "round": 2,
+      "edits": [
+        {
+          "file": "src/main/java/org/apache/commons/math/optimization/linear/SimplexTableau.java",
+          "action": "replace",
+          "line": 292,
+          "text": "        int start = ignoreObjectiveRows ? getNumObjectiveFunctions() : 0;"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/math/optimization/linear/SimplexTableau.java",
+          "action": "replace",
+          "line": 345,
+          "text": "          Integer basicRow = getBasicRowForSolution(getNumObjectiveFunctions() + i);"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/math/optimization/linear/SimplexTableau.java#292; replace src/main/java/org/apache/commons/math/optimization/linear/SimplexTableau.java#345",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/apache/commons/math/optimization/linear/SimplexTableau.java\",\"action\":\"replace\",\"line\":292,\"text\":\"        int start = ignoreObjectiveRows ? getNumObjectiveFunctions() : 0;\"},{\"file\":\"src/main/java/org/apache/commons/math/optimization/linear/SimplexTableau.java\",\"action\":\"replace\",\"line\":345,\"text\":\"          Integer basicRow = getBasicRowForSolution(getNumObjectiveFunctions() + i);\"}]}",
+      "full_pass": true,
+      "full_log_tail": "Failing tests: 0\n\nRunning ant (compile.tests)................................................ OK\nRunning ant (run.dev.tests)................................................ OK\n\n"
+    }
+  ]
+}

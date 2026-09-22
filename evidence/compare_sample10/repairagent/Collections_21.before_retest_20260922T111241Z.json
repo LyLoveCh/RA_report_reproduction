@@ -1,0 +1,8 @@
+{
+  "bug": "Collections 21",
+  "exp": "experiment_18",
+  "plausible": false,
+  "rounds": 8,
+  "goals_accomplished": false,
+  "note": "第一次 write_fix 因缺少 Collections-21.buggy.lines 早停（7–8 cycle）。已被 experiment_30 重测替代。"
+}

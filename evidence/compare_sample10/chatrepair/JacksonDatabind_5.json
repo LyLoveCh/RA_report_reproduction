@@ -1,0 +1,180 @@
+{
+  "bug": "JacksonDatabind 5",
+  "plausible": false,
+  "model": "deepseek-chat",
+  "triggering_tests": [
+    "com.fasterxml.jackson.databind.introspect.TestMixinMerging::testDisappearingMixins515"
+  ],
+  "rounds": 12,
+  "seconds": 46.7,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java",
+          "action": "replace",
+          "line": 658,
+          "text": "                    AnnotatedMethod mixIn = _constructMethod(m);\n                    mixIns.add(mixIn);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java#658",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java\",\"action\":\"replace\",\"line\":658,\"text\":\"                    AnnotatedMethod mixIn = _constructMethod(m);\\n                    mixIns.add(mixIn);\"}]}"
+    },
+    {
+      "round": 2,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java",
+          "action": "replace",
+          "line": 658,
+          "text": "                    AnnotatedMethod mixIn = _constructMethod(m);\n                    mixIns.add(mixIn);\n                    _addMixUnders(m, mixIn);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java#658",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java\",\"action\":\"replace\",\"line\":658,\"text\":\"                    AnnotatedMethod mixIn = _constructMethod(m);\\n                    mixIns.add(mixIn);\\n                    _addMixUnders(m, mixIn);\"}]}"
+    },
+    {
+      "round": 3,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java",
+          "action": "replace",
+          "line": 658,
+          "text": "                    AnnotatedMethod mixIn = _constructMethod(m);\n                    mixIns.add(mixIn);\n                    _addMixUnders(m, mixIn);\n                    methods.add(mixIn);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java#658",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java\",\"action\":\"replace\",\"line\":658,\"text\":\"                    AnnotatedMethod mixIn = _constructMethod(m);\\n                    mixIns.add(mixIn);\\n                    _addMixUnders(m, mixIn);\\n                    methods.add(mixIn);\"}]}"
+    },
+    {
+      "round": 4,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java",
+          "action": "replace",
+          "line": 658,
+          "text": "                    AnnotatedMethod mixIn = _constructMethod(m);\n                    mixIns.add(mixIn);\n                    _addMixUnders(m, mixIn);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java#658",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java\",\"action\":\"replace\",\"line\":658,\"text\":\"                    AnnotatedMethod mixIn = _constructMethod(m);\\n                    mixIns.add(mixIn);\\n                    _addMixUnders(m, mixIn);\"}]}"
+    },
+    {
+      "round": 5,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java",
+          "action": "replace",
+          "line": 658,
+          "text": "                    AnnotatedMethod mixIn = _constructMethod(m);\n                    mixIns.add(mixIn);\n                    _addMixUnders(m, mixIn);\n                    methods.add(mixIn);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java#658",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java\",\"action\":\"replace\",\"line\":658,\"text\":\"                    AnnotatedMethod mixIn = _constructMethod(m);\\n                    mixIns.add(mixIn);\\n                    _addMixUnders(m, mixIn);\\n                    methods.add(mixIn);\"}]}"
+    },
+    {
+      "round": 6,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java",
+          "action": "replace",
+          "line": 658,
+          "text": "                    AnnotatedMethod mixIn = _constructMethod(m);\n                    mixIns.add(mixIn);\n                    _addMixUnders(m, mixIn);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java#658",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java\",\"action\":\"replace\",\"line\":658,\"text\":\"                    AnnotatedMethod mixIn = _constructMethod(m);\\n                    mixIns.add(mixIn);\\n                    _addMixUnders(m, mixIn);\"}]}"
+    },
+    {
+      "round": 7,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java",
+          "action": "replace",
+          "line": 658,
+          "text": "                    AnnotatedMethod mixIn = _constructMethod(m);\n                    mixIns.add(mixIn);\n                    _addMixUnders(m, mixIn);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java#658",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java\",\"action\":\"replace\",\"line\":658,\"text\":\"                    AnnotatedMethod mixIn = _constructMethod(m);\\n                    mixIns.add(mixIn);\\n                    _addMixUnders(m, mixIn);\"}]}"
+    },
+    {
+      "round": 8,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java",
+          "action": "replace",
+          "line": 658,
+          "text": "                    AnnotatedMethod mixIn = _constructMethod(m);\n                    mixIns.add(mixIn);\n                    _addMixUnders(m, mixIn);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java#658",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java\",\"action\":\"replace\",\"line\":658,\"text\":\"                    AnnotatedMethod mixIn = _constructMethod(m);\\n                    mixIns.add(mixIn);\\n                    _addMixUnders(m, mixIn);\"}]}"
+    },
+    {
+      "round": 9,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java",
+          "action": "replace",
+          "line": 658,
+          "text": "                    AnnotatedMethod mixIn = _constructMethod(m);\n                    mixIns.add(mixIn);\n                    _addMixUnders(m, mixIn);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java#658",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java\",\"action\":\"replace\",\"line\":658,\"text\":\"                    AnnotatedMethod mixIn = _constructMethod(m);\\n                    mixIns.add(mixIn);\\n                    _addMixUnders(m, mixIn);\"}]}"
+    },
+    {
+      "round": 10,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java",
+          "action": "replace",
+          "line": 658,
+          "text": "                    AnnotatedMethod mixIn = _constructMethod(m);\n                    mixIns.add(mixIn);\n                    _addMixUnders(m, mixIn);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java#658",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java\",\"action\":\"replace\",\"line\":658,\"text\":\"                    AnnotatedMethod mixIn = _constructMethod(m);\\n                    mixIns.add(mixIn);\\n                    _addMixUnders(m, mixIn);\"}]}"
+    },
+    {
+      "round": 11,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java",
+          "action": "replace",
+          "line": 658,
+          "text": "                    AnnotatedMethod mixIn = _constructMethod(m);\n                    mixIns.add(mixIn);\n                    _addMixUnders(m, mixIn);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java#658",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java\",\"action\":\"replace\",\"line\":658,\"text\":\"                    AnnotatedMethod mixIn = _constructMethod(m);\\n                    mixIns.add(mixIn);\\n                    _addMixUnders(m, mixIn);\"}]}"
+    },
+    {
+      "round": 12,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java",
+          "action": "replace",
+          "line": 658,
+          "text": "                    AnnotatedMethod mixIn = _constructMethod(m);\n                    mixIns.add(mixIn);\n                    _addMixUnders(m, mixIn);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java#658",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/introspect/AnnotatedClass.java\",\"action\":\"replace\",\"line\":658,\"text\":\"                    AnnotatedMethod mixIn = _constructMethod(m);\\n                    mixIns.add(mixIn);\\n                    _addMixUnders(m, mixIn);\"}]}"
+    }
+  ]
+}

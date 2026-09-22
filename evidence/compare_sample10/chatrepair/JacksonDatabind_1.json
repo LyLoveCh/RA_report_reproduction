@@ -1,0 +1,42 @@
+{
+  "bug": "JacksonDatabind 1",
+  "plausible": true,
+  "model": "deepseek-chat",
+  "triggering_tests": [
+    "com.fasterxml.jackson.databind.struct.TestPOJOAsArray::testNullColumn"
+  ],
+  "rounds": 2,
+  "seconds": 30.2,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/ser/BeanPropertyWriter.java",
+          "action": "insert_after",
+          "line": 592,
+          "text": "            return;"
+        }
+      ],
+      "apply": "insert_after src/main/java/com/fasterxml/jackson/databind/ser/BeanPropertyWriter.java#592",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/ser/BeanPropertyWriter.java\",\"action\":\"insert_after\",\"line\":592,\"text\":\"            return;\"}]}"
+    },
+    {
+      "round": 2,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/ser/BeanPropertyWriter.java",
+          "action": "replace",
+          "line": 592,
+          "text": "            return;\n        }"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/ser/BeanPropertyWriter.java#592",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/ser/BeanPropertyWriter.java\",\"action\":\"replace\",\"line\":592,\"text\":\"            return;\\n        }\"}]}",
+      "full_pass": true,
+      "full_log_tail": "Failing tests: 0\n\nRunning ant (compile.tests)................................................ OK\nRunning ant (run.dev.tests)................................................ OK\n\n"
+    }
+  ]
+}

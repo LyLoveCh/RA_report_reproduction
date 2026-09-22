@@ -1,0 +1,8 @@
+{
+  "bug": "Jsoup 5",
+  "exp": "experiment_24",
+  "plausible": false,
+  "rounds": 7,
+  "goals_accomplished": false,
+  "note": "第一次 write_fix 变体把 defects4j test 跑进死循环（约 5.5h）记 no；experiment_31 重测又在 cycle 2 卡死（java 100% CPU 约 100 分钟），停掉后仍记 no。"
+}

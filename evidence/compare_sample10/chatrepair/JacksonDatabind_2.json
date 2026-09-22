@@ -1,0 +1,270 @@
+{
+  "bug": "JacksonDatabind 2",
+  "plausible": false,
+  "model": "deepseek-chat",
+  "triggering_tests": [
+    "com.fasterxml.jackson.databind.node.TestConversions::testConversionOfPojos"
+  ],
+  "rounds": 12,
+  "seconds": 283.9,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 783,
+          "text": "        if (_objectCodec != null) {\n            _objectCodec.writeValue(this, value);\n            return;\n        }\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#783",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":783,\"text\":\"        if (_objectCodec != null) {\\n            _objectCodec.writeValue(this, value);\\n            return;\\n        }\\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);\"}]}",
+      "full_pass": false,
+      "full_log_tail": "ackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n"
+    },
+    {
+      "round": 2,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 783,
+          "text": "        if (_objectCodec != null) {\n            _objectCodec.writeValue(this, value);\n            return;\n        }\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 816,
+          "text": "        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#783; replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#816",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":783,\"text\":\"        if (_objectCodec != null) {\\n            _objectCodec.writeValue(this, value);\\n            return;\\n        }\\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":816,\"text\":\"        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);\"}]}",
+      "full_pass": false,
+      "full_log_tail": "ackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n"
+    },
+    {
+      "round": 3,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 783,
+          "text": "        if (_objectCodec != null) {\n            _objectCodec.writeValue(this, value);\n            return;\n        }\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 816,
+          "text": "        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#783; replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#816",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":783,\"text\":\"        if (_objectCodec != null) {\\n            _objectCodec.writeValue(this, value);\\n            return;\\n        }\\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":816,\"text\":\"        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);\"}]}",
+      "full_pass": false,
+      "full_log_tail": "ackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n"
+    },
+    {
+      "round": 4,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 783,
+          "text": "        if (_objectCodec != null) {\n            _objectCodec.writeValue(this, value);\n            return;\n        }\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 816,
+          "text": "        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#783; replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#816",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":783,\"text\":\"        if (_objectCodec != null) {\\n            _objectCodec.writeValue(this, value);\\n            return;\\n        }\\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":816,\"text\":\"        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);\"}]}",
+      "full_pass": false,
+      "full_log_tail": "ackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n"
+    },
+    {
+      "round": 5,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 783,
+          "text": "        if (_objectCodec != null) {\n            _objectCodec.writeValue(this, value);\n            return;\n        }\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 816,
+          "text": "        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#783; replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#816",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":783,\"text\":\"        if (_objectCodec != null) {\\n            _objectCodec.writeValue(this, value);\\n            return;\\n        }\\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":816,\"text\":\"        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);\"}]}",
+      "full_pass": false,
+      "full_log_tail": "ackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n"
+    },
+    {
+      "round": 6,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 783,
+          "text": "        if (_objectCodec != null) {\n            _objectCodec.writeValue(this, value);\n            return;\n        }\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 816,
+          "text": "        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#783; replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#816",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":783,\"text\":\"        if (_objectCodec != null) {\\n            _objectCodec.writeValue(this, value);\\n            return;\\n        }\\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":816,\"text\":\"        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);\"}]}",
+      "full_pass": false,
+      "full_log_tail": "ackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n"
+    },
+    {
+      "round": 7,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 783,
+          "text": "        if (_objectCodec != null) {\n            _objectCodec.writeValue(this, value);\n            return;\n        }\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 816,
+          "text": "        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#783; replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#816",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":783,\"text\":\"        if (_objectCodec != null) {\\n            _objectCodec.writeValue(this, value);\\n            return;\\n        }\\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":816,\"text\":\"        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);\"}]}",
+      "full_pass": false,
+      "full_log_tail": "ackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n"
+    },
+    {
+      "round": 8,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 783,
+          "text": "        if (_objectCodec != null) {\n            _objectCodec.writeValue(this, value);\n            return;\n        }\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 816,
+          "text": "        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#783; replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#816",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":783,\"text\":\"        if (_objectCodec != null) {\\n            _objectCodec.writeValue(this, value);\\n            return;\\n        }\\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":816,\"text\":\"        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);\"}]}",
+      "full_pass": false,
+      "full_log_tail": "ackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n"
+    },
+    {
+      "round": 9,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 783,
+          "text": "        if (_objectCodec != null) {\n            _objectCodec.writeValue(this, value);\n            return;\n        }\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 816,
+          "text": "        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#783; replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#816",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":783,\"text\":\"        if (_objectCodec != null) {\\n            _objectCodec.writeValue(this, value);\\n            return;\\n        }\\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":816,\"text\":\"        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);\"}]}",
+      "full_pass": false,
+      "full_log_tail": "ackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n"
+    },
+    {
+      "round": 10,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 783,
+          "text": "        if (_objectCodec != null) {\n            _objectCodec.writeValue(this, value);\n            return;\n        }\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 816,
+          "text": "        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#783; replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#816",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":783,\"text\":\"        if (_objectCodec != null) {\\n            _objectCodec.writeValue(this, value);\\n            return;\\n        }\\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":816,\"text\":\"        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);\"}]}",
+      "full_pass": false,
+      "full_log_tail": "ackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n"
+    },
+    {
+      "round": 11,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 783,
+          "text": "        if (_objectCodec != null) {\n            _objectCodec.writeValue(this, value);\n            return;\n        }\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 816,
+          "text": "        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#783; replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#816",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":783,\"text\":\"        if (_objectCodec != null) {\\n            _objectCodec.writeValue(this, value);\\n            return;\\n        }\\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":816,\"text\":\"        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);\"}]}",
+      "full_pass": false,
+      "full_log_tail": "ackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n"
+    },
+    {
+      "round": 12,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 783,
+          "text": "        if (_objectCodec != null) {\n            _objectCodec.writeValue(this, value);\n            return;\n        }\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java",
+          "action": "replace",
+          "line": 816,
+          "text": "        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#783; replace src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java#816",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":783,\"text\":\"        if (_objectCodec != null) {\\n            _objectCodec.writeValue(this, value);\\n            return;\\n        }\\n        _append(JsonToken.VALUE_EMBEDDED_OBJECT, value);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/util/TokenBuffer.java\",\"action\":\"replace\",\"line\":816,\"text\":\"        _append(JsonToken.VALUE_EMBEDDED_OBJECT, copy);\"}]}",
+      "full_pass": false,
+      "full_log_tail": "ackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeBinary(TokenBuffer.java:820)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:175)\n\tat com.fasterxml.jackson.databind.ser.std.StdArraySerializers$ByteArraySerializer.serialize(StdArraySerializers.java:159)\n\tat com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:114)\n\tat com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1887)\n\tat com.fasterxml.jackson.databind.util.TokenBuffer.writeObject(TokenBuffer.java:784)\n"
+    }
+  ]
+}

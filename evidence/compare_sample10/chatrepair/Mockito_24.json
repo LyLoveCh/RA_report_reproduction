@@ -1,0 +1,43 @@
+{
+  "bug": "Mockito 24",
+  "plausible": true,
+  "model": "deepseek-chat",
+  "triggering_tests": [
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValuesTest::should_return_zero_if_mock_is_compared_to_itself",
+    "org.mockitousage.bugs.ShouldMocksCompareToBeConsistentWithEqualsTest::should_compare_to_be_consistent_with_equals_when_comparing_the_same_reference"
+  ],
+  "rounds": 2,
+  "seconds": 91.7,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java",
+          "action": "replace",
+          "line": 76,
+          "text": "            return invocation.getMock() == invocation.getArgument(0) ? 0 : 1;"
+        }
+      ],
+      "apply": "replace src/org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java#76",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java\",\"action\":\"replace\",\"line\":76,\"text\":\"            return invocation.getMock() == invocation.getArgument(0) ? 0 : 1;\"}]}"
+    },
+    {
+      "round": 2,
+      "edits": [
+        {
+          "file": "org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java",
+          "action": "replace",
+          "line": 76,
+          "text": "            return invocation.getArguments()[0] == invocation.getMock() ? 0 : 1;"
+        }
+      ],
+      "apply": "replace src/org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java#76",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java\",\"action\":\"replace\",\"line\":76,\"text\":\"            return invocation.getArguments()[0] == invocation.getMock() ? 0 : 1;\"}]}",
+      "full_pass": true,
+      "full_log_tail": "Failing tests: 0\n\nRunning ant (compile.tests)................................................ OK\nRunning ant (run.dev.tests)................................................ OK\n\n"
+    }
+  ]
+}

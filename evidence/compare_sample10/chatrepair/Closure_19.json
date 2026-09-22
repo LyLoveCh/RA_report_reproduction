@@ -1,0 +1,27 @@
+{
+  "bug": "Closure 19",
+  "plausible": true,
+  "triggering_tests": [
+    "com.google.javascript.jscomp.TypeInferenceTest::testNoThisInference"
+  ],
+  "rounds": 1,
+  "seconds": 62.4,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "com/google/javascript/jscomp/type/ChainableReverseAbstractInterpreter.java",
+          "action": "insert_after",
+          "line": 172,
+          "text": "      case Token.THIS:\n        break;"
+        }
+      ],
+      "apply": "insert_after src/com/google/javascript/jscomp/type/ChainableReverseAbstractInterpreter.java#172",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"com/google/javascript/jscomp/type/ChainableReverseAbstractInterpreter.java\",\"action\":\"insert_after\",\"line\":172,\"text\":\"      case Token.THIS:\\n        break;\"}]}",
+      "full_pass": true,
+      "full_log_tail": "Failing tests: 0\n\nRunning ant (compile.tests)................................................ OK\nRunning ant (run.dev.tests)................................................ OK\n\n"
+    }
+  ]
+}

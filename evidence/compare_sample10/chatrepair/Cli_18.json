@@ -1,0 +1,44 @@
+{
+  "bug": "Cli 18",
+  "plausible": true,
+  "model": "deepseek-chat",
+  "triggering_tests": [
+    "org.apache.commons.cli.PosixParserTest::testStop2"
+  ],
+  "rounds": 2,
+  "seconds": 12.9,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "src/java/org/apache/commons/cli/PosixParser.java",
+          "action": "insert_after",
+          "line": 241,
+          "text": "            tokens.add(\"--\");\n            tokens.add(token);"
+        }
+      ],
+      "apply": "insert_after src/java/org/apache/commons/cli/PosixParser.java#241",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/java/org/apache/commons/cli/PosixParser.java\",\"action\":\"insert_after\",\"line\":241,\"text\":\"            tokens.add(\\\"--\\\");\\n            tokens.add(token);\"}]}",
+      "full_pass": false,
+      "full_log_tail": "xecuteInVM(JUnitTask.java:1492)\n\tat org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.executeTests(JUnitTask.java:878)\n\tat org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.executeOrQueue(JUnitTask.java:1980)\n\tat org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.executeTests(JUnitTask.java:830)\n\tat org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.execute(JUnitTask.java:2287)\n\tat org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)\n\tat jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)\n\tat org.apache.tools.ant.Task.perform(Task.java:348)\n\tat org.apache.tools.ant.Target.execute(Target.java:392)\n\tat org.apache.tools.ant.Target.performTasks(Target.java:413)\n\tat org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)\n\tat org.apache.tools.ant.Project.executeTarget(Project.java:1368)\n\tat org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)\n\tat org.apache.tools.ant.Project.executeTargets(Project.java:1251)\n\tat org.apache.tools.ant.Main.runBuild(Main.java:811)\n\tat org.apache.tools.ant.Main.startAnt(Main.java:217)\n\tat org.apache.tools.ant.launch.Launcher.run(Launcher.java:280)\n\tat org.apache.tools.ant.launch.Launcher.main(Launcher.java:109)\n"
+    },
+    {
+      "round": 2,
+      "edits": [
+        {
+          "file": "src/java/org/apache/commons/cli/PosixParser.java",
+          "action": "replace",
+          "line": 241,
+          "text": "            tokens.add(\"--\");\n            tokens.add(token);\n        }"
+        }
+      ],
+      "apply": "replace src/java/org/apache/commons/cli/PosixParser.java#241",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/java/org/apache/commons/cli/PosixParser.java\",\"action\":\"replace\",\"line\":241,\"text\":\"            tokens.add(\\\"--\\\");\\n            tokens.add(token);\\n        }\"}]}",
+      "full_pass": true,
+      "full_log_tail": "Failing tests: 0\n\nRunning ant (compile.tests)................................................ OK\nRunning ant (run.dev.tests)................................................ OK\n\n"
+    }
+  ]
+}

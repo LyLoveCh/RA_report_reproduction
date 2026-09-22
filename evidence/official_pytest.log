@@ -1,0 +1,13 @@
+........................................................................ [ 16%]
+........................................................................ [ 33%]
+........................................................................ [ 50%]
+........................................................................ [ 67%]
+........................................................................ [ 83%]
+.....................................................................    [100%]
+=============================== warnings summary ===============================
+../../../.venv/lib/python3.12/site-packages/fuzzywuzzy/fuzz.py:11
+  /workspace/report_reproduct/.venv/lib/python3.12/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+    warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+429 passed, 1 warning in 0.76s

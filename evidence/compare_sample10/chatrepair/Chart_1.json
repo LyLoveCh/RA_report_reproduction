@@ -1,0 +1,28 @@
+{
+  "bug": "Chart 1",
+  "plausible": true,
+  "model": "deepseek-chat",
+  "triggering_tests": [
+    "org.jfree.chart.renderer.category.junit.AbstractCategoryItemRendererTests::test2947660"
+  ],
+  "rounds": 1,
+  "seconds": 20.2,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java",
+          "action": "replace",
+          "line": 1797,
+          "text": "        if (dataset == null) {"
+        }
+      ],
+      "apply": "replace source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java#1797",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java\",\"action\":\"replace\",\"line\":1797,\"text\":\"        if (dataset == null) {\"}]}",
+      "full_pass": true,
+      "full_log_tail": "Failing tests: 0\n\nRunning ant (compile.tests)................................................ OK\nRunning ant (run.dev.tests)................................................ OK\n\n"
+    }
+  ]
+}

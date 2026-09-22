@@ -1,0 +1,8 @@
+{
+  "bug": "JacksonDatabind 69",
+  "exp": "experiment_8",
+  "plausible": false,
+  "rounds": 40,
+  "goals_accomplished": false,
+  "note": "hit last-cycle TTY prompt; exited without a plausible patch"
+}

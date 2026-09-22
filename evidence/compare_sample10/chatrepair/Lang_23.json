@@ -1,0 +1,252 @@
+{
+  "bug": "Lang 23",
+  "plausible": false,
+  "model": "deepseek-chat",
+  "triggering_tests": [
+    "org.apache.commons.lang3.text.ExtendedMessageFormatTest::testEqualsHashcode"
+  ],
+  "rounds": 12,
+  "seconds": 35.0,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "insert_after",
+          "line": 263,
+          "text": "    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) {\n            return true;\n        }\n        if (obj == null || getClass() != obj.getClass()) {\n            return false;\n        }\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\n        if (toPattern == null) {\n            if (other.toPattern != null) {\n                return false;\n            }\n        } else if (!toPattern.equals(other.toPattern)) {\n            return false;\n        }\n        if (registry == null) {\n            if (other.registry != null) {\n                return false;\n            }\n        } else if (!registry.equals(other.registry)) {\n            return false;\n        }\n        return super.equals(obj);\n    }"
+        },
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "insert_after",
+          "line": 269,
+          "text": "    @Override\n    public int hashCode() {\n        final int prime = 31;\n        int result = super.hashCode();\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\n        return result;\n    }"
+        }
+      ],
+      "apply": "insert_after src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#263; insert_after src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#269",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"insert_after\",\"line\":263,\"text\":\"    @Override\\n    public boolean equals(Object obj) {\\n        if (this == obj) {\\n            return true;\\n        }\\n        if (obj == null || getClass() != obj.getClass()) {\\n            return false;\\n        }\\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\\n        if (toPattern == null) {\\n            if (other.toPattern != null) {\\n                return false;\\n            }\\n        } else if (!toPattern.equals(other.toPattern)) {\\n            return false;\\n        }\\n        if (registry == null) {\\n            if (other.registry != null) {\\n                return false;\\n            }\\n        } else if (!registry.equals(other.registry)) {\\n            return false;\\n        }\\n        return super.equals(obj);\\n    }\"},{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"insert_after\",\"line\":269,\"text\":\"    @Override\\n    public int hashCode() {\\n        final int prime = 31;\\n        int result = super.hashCode();\\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\\n        return result;\\n    }\"}]}"
+    },
+    {
+      "round": 2,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "insert_after",
+          "line": 263,
+          "text": "    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) {\n            return true;\n        }\n        if (obj == null || getClass() != obj.getClass()) {\n            return false;\n        }\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\n        if (toPattern == null) {\n            if (other.toPattern != null) {\n                return false;\n            }\n        } else if (!toPattern.equals(other.toPattern)) {\n            return false;\n        }\n        if (registry == null) {\n            if (other.registry != null) {\n                return false;\n            }\n        } else if (!registry.equals(other.registry)) {\n            return false;\n        }\n        return super.equals(obj);\n    }\n"
+        },
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "insert_after",
+          "line": 269,
+          "text": "    @Override\n    public int hashCode() {\n        final int prime = 31;\n        int result = super.hashCode();\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\n        return result;\n    }\n"
+        }
+      ],
+      "apply": "insert_after src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#263; insert_after src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#269",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"insert_after\",\"line\":263,\"text\":\"    @Override\\n    public boolean equals(Object obj) {\\n        if (this == obj) {\\n            return true;\\n        }\\n        if (obj == null || getClass() != obj.getClass()) {\\n            return false;\\n        }\\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\\n        if (toPattern == null) {\\n            if (other.toPattern != null) {\\n                return false;\\n            }\\n        } else if (!toPattern.equals(other.toPattern)) {\\n            return false;\\n        }\\n        if (registry == null) {\\n            if (other.registry != null) {\\n                return false;\\n            }\\n        } else if (!registry.equals(other.registry)) {\\n            return false;\\n        }\\n        return super.equals(obj);\\n    }\\n\"},{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"insert_after\",\"line\":269,\"text\":\"    @Override\\n    public int hashCode() {\\n        final int prime = 31;\\n        int result = super.hashCode();\\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\\n        return result;\\n    }\\n\"}]}"
+    },
+    {
+      "round": 3,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 263,
+          "text": "    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) {\n            return true;\n        }\n        if (obj == null || getClass() != obj.getClass()) {\n            return false;\n        }\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\n        if (toPattern == null) {\n            if (other.toPattern != null) {\n                return false;\n            }\n        } else if (!toPattern.equals(other.toPattern)) {\n            return false;\n        }\n        if (registry == null) {\n            if (other.registry != null) {\n                return false;\n            }\n        } else if (!registry.equals(other.registry)) {\n            return false;\n        }\n        return super.equals(obj);\n    }\n"
+        },
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 269,
+          "text": "    @Override\n    public int hashCode() {\n        final int prime = 31;\n        int result = super.hashCode();\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\n        return result;\n    }\n"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#263; replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#269",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":263,\"text\":\"    @Override\\n    public boolean equals(Object obj) {\\n        if (this == obj) {\\n            return true;\\n        }\\n        if (obj == null || getClass() != obj.getClass()) {\\n            return false;\\n        }\\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\\n        if (toPattern == null) {\\n            if (other.toPattern != null) {\\n                return false;\\n            }\\n        } else if (!toPattern.equals(other.toPattern)) {\\n            return false;\\n        }\\n        if (registry == null) {\\n            if (other.registry != null) {\\n                return false;\\n            }\\n        } else if (!registry.equals(other.registry)) {\\n            return false;\\n        }\\n        return super.equals(obj);\\n    }\\n\"},{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":269,\"text\":\"    @Override\\n    public int hashCode() {\\n        final int prime = 31;\\n        int result = super.hashCode();\\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\\n        return result;\\n    }\\n\"}]}"
+    },
+    {
+      "round": 4,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 263,
+          "text": "    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) {\n            return true;\n        }\n        if (obj == null || getClass() != obj.getClass()) {\n            return false;\n        }\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\n        if (toPattern == null) {\n            if (other.toPattern != null) {\n                return false;\n            }\n        } else if (!toPattern.equals(other.toPattern)) {\n            return false;\n        }\n        if (registry == null) {\n            if (other.registry != null) {\n                return false;\n            }\n        } else if (!registry.equals(other.registry)) {\n            return false;\n        }\n        return super.equals(obj);\n    }\n"
+        },
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 269,
+          "text": "    @Override\n    public int hashCode() {\n        final int prime = 31;\n        int result = super.hashCode();\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\n        return result;\n    }\n"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#263; replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#269",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":263,\"text\":\"    @Override\\n    public boolean equals(Object obj) {\\n        if (this == obj) {\\n            return true;\\n        }\\n        if (obj == null || getClass() != obj.getClass()) {\\n            return false;\\n        }\\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\\n        if (toPattern == null) {\\n            if (other.toPattern != null) {\\n                return false;\\n            }\\n        } else if (!toPattern.equals(other.toPattern)) {\\n            return false;\\n        }\\n        if (registry == null) {\\n            if (other.registry != null) {\\n                return false;\\n            }\\n        } else if (!registry.equals(other.registry)) {\\n            return false;\\n        }\\n        return super.equals(obj);\\n    }\\n\"},{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":269,\"text\":\"    @Override\\n    public int hashCode() {\\n        final int prime = 31;\\n        int result = super.hashCode();\\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\\n        return result;\\n    }\\n\"}]}"
+    },
+    {
+      "round": 5,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 263,
+          "text": "    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) {\n            return true;\n        }\n        if (obj == null || getClass() != obj.getClass()) {\n            return false;\n        }\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\n        if (toPattern == null) {\n            if (other.toPattern != null) {\n                return false;\n            }\n        } else if (!toPattern.equals(other.toPattern)) {\n            return false;\n        }\n        if (registry == null) {\n            if (other.registry != null) {\n                return false;\n            }\n        } else if (!registry.equals(other.registry)) {\n            return false;\n        }\n        return super.equals(obj);\n    }\n"
+        },
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 269,
+          "text": "    @Override\n    public int hashCode() {\n        final int prime = 31;\n        int result = super.hashCode();\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\n        return result;\n    }\n"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#263; replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#269",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":263,\"text\":\"    @Override\\n    public boolean equals(Object obj) {\\n        if (this == obj) {\\n            return true;\\n        }\\n        if (obj == null || getClass() != obj.getClass()) {\\n            return false;\\n        }\\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\\n        if (toPattern == null) {\\n            if (other.toPattern != null) {\\n                return false;\\n            }\\n        } else if (!toPattern.equals(other.toPattern)) {\\n            return false;\\n        }\\n        if (registry == null) {\\n            if (other.registry != null) {\\n                return false;\\n            }\\n        } else if (!registry.equals(other.registry)) {\\n            return false;\\n        }\\n        return super.equals(obj);\\n    }\\n\"},{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":269,\"text\":\"    @Override\\n    public int hashCode() {\\n        final int prime = 31;\\n        int result = super.hashCode();\\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\\n        return result;\\n    }\\n\"}]}"
+    },
+    {
+      "round": 6,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 263,
+          "text": "    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) {\n            return true;\n        }\n        if (obj == null || getClass() != obj.getClass()) {\n            return false;\n        }\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\n        if (toPattern == null) {\n            if (other.toPattern != null) {\n                return false;\n            }\n        } else if (!toPattern.equals(other.toPattern)) {\n            return false;\n        }\n        if (registry == null) {\n            if (other.registry != null) {\n                return false;\n            }\n        } else if (!registry.equals(other.registry)) {\n            return false;\n        }\n        return super.equals(obj);\n    }\n"
+        },
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 269,
+          "text": "    @Override\n    public int hashCode() {\n        final int prime = 31;\n        int result = super.hashCode();\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\n        return result;\n    }\n"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#263; replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#269",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":263,\"text\":\"    @Override\\n    public boolean equals(Object obj) {\\n        if (this == obj) {\\n            return true;\\n        }\\n        if (obj == null || getClass() != obj.getClass()) {\\n            return false;\\n        }\\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\\n        if (toPattern == null) {\\n            if (other.toPattern != null) {\\n                return false;\\n            }\\n        } else if (!toPattern.equals(other.toPattern)) {\\n            return false;\\n        }\\n        if (registry == null) {\\n            if (other.registry != null) {\\n                return false;\\n            }\\n        } else if (!registry.equals(other.registry)) {\\n            return false;\\n        }\\n        return super.equals(obj);\\n    }\\n\"},{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":269,\"text\":\"    @Override\\n    public int hashCode() {\\n        final int prime = 31;\\n        int result = super.hashCode();\\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\\n        return result;\\n    }\\n\"}]}"
+    },
+    {
+      "round": 7,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 263,
+          "text": "    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) {\n            return true;\n        }\n        if (obj == null || getClass() != obj.getClass()) {\n            return false;\n        }\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\n        if (toPattern == null) {\n            if (other.toPattern != null) {\n                return false;\n            }\n        } else if (!toPattern.equals(other.toPattern)) {\n            return false;\n        }\n        if (registry == null) {\n            if (other.registry != null) {\n                return false;\n            }\n        } else if (!registry.equals(other.registry)) {\n            return false;\n        }\n        return super.equals(obj);\n    }\n"
+        },
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 269,
+          "text": "    @Override\n    public int hashCode() {\n        final int prime = 31;\n        int result = super.hashCode();\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\n        return result;\n    }\n"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#263; replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#269",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":263,\"text\":\"    @Override\\n    public boolean equals(Object obj) {\\n        if (this == obj) {\\n            return true;\\n        }\\n        if (obj == null || getClass() != obj.getClass()) {\\n            return false;\\n        }\\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\\n        if (toPattern == null) {\\n            if (other.toPattern != null) {\\n                return false;\\n            }\\n        } else if (!toPattern.equals(other.toPattern)) {\\n            return false;\\n        }\\n        if (registry == null) {\\n            if (other.registry != null) {\\n                return false;\\n            }\\n        } else if (!registry.equals(other.registry)) {\\n            return false;\\n        }\\n        return super.equals(obj);\\n    }\\n\"},{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":269,\"text\":\"    @Override\\n    public int hashCode() {\\n        final int prime = 31;\\n        int result = super.hashCode();\\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\\n        return result;\\n    }\\n\"}]}"
+    },
+    {
+      "round": 8,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 263,
+          "text": "    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) {\n            return true;\n        }\n        if (obj == null || getClass() != obj.getClass()) {\n            return false;\n        }\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\n        if (toPattern == null) {\n            if (other.toPattern != null) {\n                return false;\n            }\n        } else if (!toPattern.equals(other.toPattern)) {\n            return false;\n        }\n        if (registry == null) {\n            if (other.registry != null) {\n                return false;\n            }\n        } else if (!registry.equals(other.registry)) {\n            return false;\n        }\n        return super.equals(obj);\n    }\n"
+        },
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 269,
+          "text": "    @Override\n    public int hashCode() {\n        final int prime = 31;\n        int result = super.hashCode();\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\n        return result;\n    }\n"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#263; replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#269",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":263,\"text\":\"    @Override\\n    public boolean equals(Object obj) {\\n        if (this == obj) {\\n            return true;\\n        }\\n        if (obj == null || getClass() != obj.getClass()) {\\n            return false;\\n        }\\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\\n        if (toPattern == null) {\\n            if (other.toPattern != null) {\\n                return false;\\n            }\\n        } else if (!toPattern.equals(other.toPattern)) {\\n            return false;\\n        }\\n        if (registry == null) {\\n            if (other.registry != null) {\\n                return false;\\n            }\\n        } else if (!registry.equals(other.registry)) {\\n            return false;\\n        }\\n        return super.equals(obj);\\n    }\\n\"},{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":269,\"text\":\"    @Override\\n    public int hashCode() {\\n        final int prime = 31;\\n        int result = super.hashCode();\\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\\n        return result;\\n    }\\n\"}]}"
+    },
+    {
+      "round": 9,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 263,
+          "text": "    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) {\n            return true;\n        }\n        if (obj == null || getClass() != obj.getClass()) {\n            return false;\n        }\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\n        if (toPattern == null) {\n            if (other.toPattern != null) {\n                return false;\n            }\n        } else if (!toPattern.equals(other.toPattern)) {\n            return false;\n        }\n        if (registry == null) {\n            if (other.registry != null) {\n                return false;\n            }\n        } else if (!registry.equals(other.registry)) {\n            return false;\n        }\n        return super.equals(obj);\n    }\n"
+        },
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 269,
+          "text": "    @Override\n    public int hashCode() {\n        final int prime = 31;\n        int result = super.hashCode();\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\n        return result;\n    }\n"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#263; replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#269",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":263,\"text\":\"    @Override\\n    public boolean equals(Object obj) {\\n        if (this == obj) {\\n            return true;\\n        }\\n        if (obj == null || getClass() != obj.getClass()) {\\n            return false;\\n        }\\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\\n        if (toPattern == null) {\\n            if (other.toPattern != null) {\\n                return false;\\n            }\\n        } else if (!toPattern.equals(other.toPattern)) {\\n            return false;\\n        }\\n        if (registry == null) {\\n            if (other.registry != null) {\\n                return false;\\n            }\\n        } else if (!registry.equals(other.registry)) {\\n            return false;\\n        }\\n        return super.equals(obj);\\n    }\\n\"},{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":269,\"text\":\"    @Override\\n    public int hashCode() {\\n        final int prime = 31;\\n        int result = super.hashCode();\\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\\n        return result;\\n    }\\n\"}]}"
+    },
+    {
+      "round": 10,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 263,
+          "text": "    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) {\n            return true;\n        }\n        if (obj == null || getClass() != obj.getClass()) {\n            return false;\n        }\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\n        if (toPattern == null) {\n            if (other.toPattern != null) {\n                return false;\n            }\n        } else if (!toPattern.equals(other.toPattern)) {\n            return false;\n        }\n        if (registry == null) {\n            if (other.registry != null) {\n                return false;\n            }\n        } else if (!registry.equals(other.registry)) {\n            return false;\n        }\n        return super.equals(obj);\n    }\n"
+        },
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 269,
+          "text": "    @Override\n    public int hashCode() {\n        final int prime = 31;\n        int result = super.hashCode();\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\n        return result;\n    }\n"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#263; replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#269",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":263,\"text\":\"    @Override\\n    public boolean equals(Object obj) {\\n        if (this == obj) {\\n            return true;\\n        }\\n        if (obj == null || getClass() != obj.getClass()) {\\n            return false;\\n        }\\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\\n        if (toPattern == null) {\\n            if (other.toPattern != null) {\\n                return false;\\n            }\\n        } else if (!toPattern.equals(other.toPattern)) {\\n            return false;\\n        }\\n        if (registry == null) {\\n            if (other.registry != null) {\\n                return false;\\n            }\\n        } else if (!registry.equals(other.registry)) {\\n            return false;\\n        }\\n        return super.equals(obj);\\n    }\\n\"},{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":269,\"text\":\"    @Override\\n    public int hashCode() {\\n        final int prime = 31;\\n        int result = super.hashCode();\\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\\n        return result;\\n    }\\n\"}]}"
+    },
+    {
+      "round": 11,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 263,
+          "text": "    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) {\n            return true;\n        }\n        if (obj == null || getClass() != obj.getClass()) {\n            return false;\n        }\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\n        if (toPattern == null) {\n            if (other.toPattern != null) {\n                return false;\n            }\n        } else if (!toPattern.equals(other.toPattern)) {\n            return false;\n        }\n        if (registry == null) {\n            if (other.registry != null) {\n                return false;\n            }\n        } else if (!registry.equals(other.registry)) {\n            return false;\n        }\n        return super.equals(obj);\n    }\n"
+        },
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 269,
+          "text": "    @Override\n    public int hashCode() {\n        final int prime = 31;\n        int result = super.hashCode();\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\n        return result;\n    }\n"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#263; replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#269",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":263,\"text\":\"    @Override\\n    public boolean equals(Object obj) {\\n        if (this == obj) {\\n            return true;\\n        }\\n        if (obj == null || getClass() != obj.getClass()) {\\n            return false;\\n        }\\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\\n        if (toPattern == null) {\\n            if (other.toPattern != null) {\\n                return false;\\n            }\\n        } else if (!toPattern.equals(other.toPattern)) {\\n            return false;\\n        }\\n        if (registry == null) {\\n            if (other.registry != null) {\\n                return false;\\n            }\\n        } else if (!registry.equals(other.registry)) {\\n            return false;\\n        }\\n        return super.equals(obj);\\n    }\\n\"},{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":269,\"text\":\"    @Override\\n    public int hashCode() {\\n        final int prime = 31;\\n        int result = super.hashCode();\\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\\n        return result;\\n    }\\n\"}]}"
+    },
+    {
+      "round": 12,
+      "edits": [
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 263,
+          "text": "    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) {\n            return true;\n        }\n        if (obj == null || getClass() != obj.getClass()) {\n            return false;\n        }\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\n        if (toPattern == null) {\n            if (other.toPattern != null) {\n                return false;\n            }\n        } else if (!toPattern.equals(other.toPattern)) {\n            return false;\n        }\n        if (registry == null) {\n            if (other.registry != null) {\n                return false;\n            }\n        } else if (!registry.equals(other.registry)) {\n            return false;\n        }\n        return super.equals(obj);\n    }\n"
+        },
+        {
+          "file": "org/apache/commons/lang3/text/ExtendedMessageFormat.java",
+          "action": "replace",
+          "line": 269,
+          "text": "    @Override\n    public int hashCode() {\n        final int prime = 31;\n        int result = super.hashCode();\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\n        return result;\n    }\n"
+        }
+      ],
+      "apply": "replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#263; replace src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java#269",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":263,\"text\":\"    @Override\\n    public boolean equals(Object obj) {\\n        if (this == obj) {\\n            return true;\\n        }\\n        if (obj == null || getClass() != obj.getClass()) {\\n            return false;\\n        }\\n        ExtendedMessageFormat other = (ExtendedMessageFormat) obj;\\n        if (toPattern == null) {\\n            if (other.toPattern != null) {\\n                return false;\\n            }\\n        } else if (!toPattern.equals(other.toPattern)) {\\n            return false;\\n        }\\n        if (registry == null) {\\n            if (other.registry != null) {\\n                return false;\\n            }\\n        } else if (!registry.equals(other.registry)) {\\n            return false;\\n        }\\n        return super.equals(obj);\\n    }\\n\"},{\"file\":\"org/apache/commons/lang3/text/ExtendedMessageFormat.java\",\"action\":\"replace\",\"line\":269,\"text\":\"    @Override\\n    public int hashCode() {\\n        final int prime = 31;\\n        int result = super.hashCode();\\n        result = prime * result + ((toPattern == null) ? 0 : toPattern.hashCode());\\n        result = prime * result + ((registry == null) ? 0 : registry.hashCode());\\n        return result;\\n    }\\n\"}]}"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+RA 轮数取 max(解析到的 JSON 条数, saved_context.cycle_count)。部分 model_responses_* 因 thoughts 未转义换行会提前解析失败。
+Collections 21：第一次缺 Collections-21.buggy.lines，write_fix 早停；补上 perfect FL 后 experiment_30 在 7 轮测绿并调用 goals_accomplished。
+Jsoup 5：第一次 write_fix 变体死循环后跳过记 no；experiment_31 重测又在 cycle 2 把 defects4j test 跑到 100% CPU（约 100 分钟），按同一规则停掉，仍记 no。

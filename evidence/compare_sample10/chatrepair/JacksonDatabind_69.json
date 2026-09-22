@@ -1,0 +1,576 @@
+{
+  "bug": "JacksonDatabind 69",
+  "plausible": false,
+  "model": "deepseek-chat",
+  "triggering_tests": [
+    "com.fasterxml.jackson.databind.creators.Creator1476Test::testConstructorChoice"
+  ],
+  "rounds": 12,
+  "seconds": 53.8,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 164,
+          "text": "        if (creator.getParameterType(0).isCollectionLikeType()) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 165,
+          "text": "            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 168,
+          "text": "            verifyNonDup(creator, C_DELEGATE, explicit);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#164; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#165; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#168",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":164,\"text\":\"        if (creator.getParameterType(0).isCollectionLikeType()) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":165,\"text\":\"            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":168,\"text\":\"            verifyNonDup(creator, C_DELEGATE, explicit);\"}]}"
+    },
+    {
+      "round": 2,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 164,
+          "text": "        if (creator.getParameterType(0).isCollectionLikeType()) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 165,
+          "text": "            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 168,
+          "text": "            verifyNonDup(creator, C_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 320,
+          "text": "            if (verify && (oldOne.getClass() == newOne.getClass())) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 325,
+          "text": "                if (oldType == newType) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 330,
+          "text": "                if (newType.isAssignableFrom(oldType)) {"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#164; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#165; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#168; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#320; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#325; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#330",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":164,\"text\":\"        if (creator.getParameterType(0).isCollectionLikeType()) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":165,\"text\":\"            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":168,\"text\":\"            verifyNonDup(creator, C_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":320,\"text\":\"            if (verify && (oldOne.getClass() == newOne.getClass())) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":325,\"text\":\"                if (oldType == newType) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":330,\"text\":\"                if (newType.isAssignableFrom(oldType)) {\"}]}"
+    },
+    {
+      "round": 3,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 164,
+          "text": "        if (creator.getParameterType(0).isCollectionLikeType()) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 165,
+          "text": "            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 168,
+          "text": "            verifyNonDup(creator, C_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 320,
+          "text": "            if (verify && (oldOne.getClass() == newOne.getClass())) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 325,
+          "text": "                if (oldType == newType) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 330,
+          "text": "                if (newType.isAssignableFrom(oldType)) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "insert_after",
+          "line": 341,
+          "text": "        _creators[typeIndex] = _fixAccess(newOne);"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#164; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#165; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#168; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#320; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#325; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#330; insert_after src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#341",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":164,\"text\":\"        if (creator.getParameterType(0).isCollectionLikeType()) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":165,\"text\":\"            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":168,\"text\":\"            verifyNonDup(creator, C_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":320,\"text\":\"            if (verify && (oldOne.getClass() == newOne.getClass())) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":325,\"text\":\"                if (oldType == newType) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":330,\"text\":\"                if (newType.isAssignableFrom(oldType)) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"insert_after\",\"line\":341,\"text\":\"        _creators[typeIndex] = _fixAccess(newOne);\"}]}"
+    },
+    {
+      "round": 4,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 164,
+          "text": "        if (creator.getParameterType(0).isCollectionLikeType()) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 165,
+          "text": "            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 168,
+          "text": "            verifyNonDup(creator, C_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 320,
+          "text": "            if (verify && (oldOne.getClass() == newOne.getClass())) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 325,
+          "text": "                if (oldType == newType) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 330,
+          "text": "                if (newType.isAssignableFrom(oldType)) {"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#164; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#165; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#168; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#320; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#325; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#330",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":164,\"text\":\"        if (creator.getParameterType(0).isCollectionLikeType()) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":165,\"text\":\"            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":168,\"text\":\"            verifyNonDup(creator, C_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":320,\"text\":\"            if (verify && (oldOne.getClass() == newOne.getClass())) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":325,\"text\":\"                if (oldType == newType) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":330,\"text\":\"                if (newType.isAssignableFrom(oldType)) {\"}]}"
+    },
+    {
+      "round": 5,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 164,
+          "text": "        if (creator.getParameterType(0).isCollectionLikeType()) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 165,
+          "text": "            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 168,
+          "text": "            verifyNonDup(creator, C_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 320,
+          "text": "            if (verify && (oldOne.getClass() == newOne.getClass())) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 325,
+          "text": "                if (oldType == newType) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 330,
+          "text": "                if (newType.isAssignableFrom(oldType)) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 341,
+          "text": "    }"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#164; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#165; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#168; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#320; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#325; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#330; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#341",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":164,\"text\":\"        if (creator.getParameterType(0).isCollectionLikeType()) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":165,\"text\":\"            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":168,\"text\":\"            verifyNonDup(creator, C_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":320,\"text\":\"            if (verify && (oldOne.getClass() == newOne.getClass())) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":325,\"text\":\"                if (oldType == newType) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":330,\"text\":\"                if (newType.isAssignableFrom(oldType)) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":341,\"text\":\"    }\"}]}"
+    },
+    {
+      "round": 6,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 164,
+          "text": "        if (creator.getParameterType(0).isCollectionLikeType()) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 165,
+          "text": "            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 168,
+          "text": "            verifyNonDup(creator, C_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 320,
+          "text": "            if (verify && (oldOne.getClass() == newOne.getClass())) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 325,
+          "text": "                if (oldType == newType) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 330,
+          "text": "                if (newType.isAssignableFrom(oldType)) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 341,
+          "text": "    }"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#164; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#165; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#168; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#320; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#325; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#330; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#341",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":164,\"text\":\"        if (creator.getParameterType(0).isCollectionLikeType()) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":165,\"text\":\"            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":168,\"text\":\"            verifyNonDup(creator, C_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":320,\"text\":\"            if (verify && (oldOne.getClass() == newOne.getClass())) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":325,\"text\":\"                if (oldType == newType) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":330,\"text\":\"                if (newType.isAssignableFrom(oldType)) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":341,\"text\":\"    }\"}]}"
+    },
+    {
+      "round": 7,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 164,
+          "text": "        if (creator.getParameterType(0).isCollectionLikeType()) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 165,
+          "text": "            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 168,
+          "text": "            verifyNonDup(creator, C_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 320,
+          "text": "            if (verify && (oldOne.getClass() == newOne.getClass())) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 325,
+          "text": "                if (oldType == newType) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 330,
+          "text": "                if (newType.isAssignableFrom(oldType)) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 341,
+          "text": "    }"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#164; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#165; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#168; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#320; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#325; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#330; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#341",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":164,\"text\":\"        if (creator.getParameterType(0).isCollectionLikeType()) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":165,\"text\":\"            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":168,\"text\":\"            verifyNonDup(creator, C_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":320,\"text\":\"            if (verify && (oldOne.getClass() == newOne.getClass())) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":325,\"text\":\"                if (oldType == newType) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":330,\"text\":\"                if (newType.isAssignableFrom(oldType)) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":341,\"text\":\"    }\"}]}"
+    },
+    {
+      "round": 8,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 164,
+          "text": "        if (creator.getParameterType(0).isCollectionLikeType()) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 165,
+          "text": "            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 168,
+          "text": "            verifyNonDup(creator, C_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 320,
+          "text": "            if (verify && (oldOne.getClass() == newOne.getClass())) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 325,
+          "text": "                if (oldType == newType) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 330,
+          "text": "                if (newType.isAssignableFrom(oldType)) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 341,
+          "text": "    }"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#164; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#165; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#168; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#320; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#325; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#330; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#341",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":164,\"text\":\"        if (creator.getParameterType(0).isCollectionLikeType()) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":165,\"text\":\"            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":168,\"text\":\"            verifyNonDup(creator, C_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":320,\"text\":\"            if (verify && (oldOne.getClass() == newOne.getClass())) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":325,\"text\":\"                if (oldType == newType) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":330,\"text\":\"                if (newType.isAssignableFrom(oldType)) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":341,\"text\":\"    }\"}]}"
+    },
+    {
+      "round": 9,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 164,
+          "text": "        if (creator.getParameterType(0).isCollectionLikeType()) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 165,
+          "text": "            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 168,
+          "text": "            verifyNonDup(creator, C_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 320,
+          "text": "            if (verify && (oldOne.getClass() == newOne.getClass())) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 325,
+          "text": "                if (oldType == newType) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 330,
+          "text": "                if (newType.isAssignableFrom(oldType)) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 341,
+          "text": "    }"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#164; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#165; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#168; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#320; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#325; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#330; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#341",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":164,\"text\":\"        if (creator.getParameterType(0).isCollectionLikeType()) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":165,\"text\":\"            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":168,\"text\":\"            verifyNonDup(creator, C_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":320,\"text\":\"            if (verify && (oldOne.getClass() == newOne.getClass())) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":325,\"text\":\"                if (oldType == newType) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":330,\"text\":\"                if (newType.isAssignableFrom(oldType)) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":341,\"text\":\"    }\"}]}"
+    },
+    {
+      "round": 10,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 164,
+          "text": "        if (creator.getParameterType(0).isCollectionLikeType()) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 165,
+          "text": "            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 168,
+          "text": "            verifyNonDup(creator, C_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 320,
+          "text": "            if (verify && (oldOne.getClass() == newOne.getClass())) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 325,
+          "text": "                if (oldType == newType) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 330,
+          "text": "                if (newType.isAssignableFrom(oldType)) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 341,
+          "text": "    }"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#164; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#165; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#168; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#320; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#325; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#330; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#341",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":164,\"text\":\"        if (creator.getParameterType(0).isCollectionLikeType()) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":165,\"text\":\"            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":168,\"text\":\"            verifyNonDup(creator, C_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":320,\"text\":\"            if (verify && (oldOne.getClass() == newOne.getClass())) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":325,\"text\":\"                if (oldType == newType) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":330,\"text\":\"                if (newType.isAssignableFrom(oldType)) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":341,\"text\":\"    }\"}]}"
+    },
+    {
+      "round": 11,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 164,
+          "text": "        if (creator.getParameterType(0).isCollectionLikeType()) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 165,
+          "text": "            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 168,
+          "text": "            verifyNonDup(creator, C_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 320,
+          "text": "            if (verify && (oldOne.getClass() == newOne.getClass())) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 325,
+          "text": "                if (oldType == newType) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 330,
+          "text": "                if (newType.isAssignableFrom(oldType)) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 341,
+          "text": "    }"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#164; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#165; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#168; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#320; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#325; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#330; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#341",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":164,\"text\":\"        if (creator.getParameterType(0).isCollectionLikeType()) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":165,\"text\":\"            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":168,\"text\":\"            verifyNonDup(creator, C_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":320,\"text\":\"            if (verify && (oldOne.getClass() == newOne.getClass())) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":325,\"text\":\"                if (oldType == newType) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":330,\"text\":\"                if (newType.isAssignableFrom(oldType)) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":341,\"text\":\"    }\"}]}"
+    },
+    {
+      "round": 12,
+      "edits": [
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 164,
+          "text": "        if (creator.getParameterType(0).isCollectionLikeType()) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 165,
+          "text": "            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 168,
+          "text": "            verifyNonDup(creator, C_DELEGATE, explicit);"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 320,
+          "text": "            if (verify && (oldOne.getClass() == newOne.getClass())) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 325,
+          "text": "                if (oldType == newType) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 330,
+          "text": "                if (newType.isAssignableFrom(oldType)) {"
+        },
+        {
+          "file": "src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java",
+          "action": "replace",
+          "line": 341,
+          "text": "    }"
+        }
+      ],
+      "apply": "replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#164; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#165; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#168; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#320; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#325; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#330; replace src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java#341",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":164,\"text\":\"        if (creator.getParameterType(0).isCollectionLikeType()) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":165,\"text\":\"            verifyNonDup(creator, C_ARRAY_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":168,\"text\":\"            verifyNonDup(creator, C_DELEGATE, explicit);\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":320,\"text\":\"            if (verify && (oldOne.getClass() == newOne.getClass())) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":325,\"text\":\"                if (oldType == newType) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":330,\"text\":\"                if (newType.isAssignableFrom(oldType)) {\"},{\"file\":\"src/main/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollector.java\",\"action\":\"replace\",\"line\":341,\"text\":\"    }\"}]}"
+    }
+  ]
+}

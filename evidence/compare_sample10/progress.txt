@@ -1,0 +1,165 @@
+2026-09-21T12:51:18Z run_remaining_compare start
+2026-09-21T12:51:18Z phase=CR start remaining sample10
+2026-09-21T13:15:37Z phase=CR done exit=0
+2026-09-21T13:15:37Z phase=RA start Closure 19 max-cycles=40 model=deepseek-chat
+2026-09-21T14:04:47Z phase=RA done Closure 19 exit=0
+2026-09-21T14:04:47Z phase=RA start Closure 38 max-cycles=40 model=deepseek-chat
+2026-09-21T14:31:22Z phase=RA done Closure 38 exit=0
+2026-09-21T14:31:22Z phase=RA start Closure 97 max-cycles=40 model=deepseek-chat
+2026-09-21T14:46:59Z phase=RA done Closure 97 exit=0
+2026-09-21T14:46:59Z phase=RA start JacksonDatabind 69 max-cycles=40 model=deepseek-chat
+2026-09-21T15:13:26Z phase=RA done JacksonDatabind 69 exit=0
+2026-09-21T15:13:26Z phase=RA start JacksonDatabind 99 max-cycles=40 model=deepseek-chat
+2026-09-21T15:37:11Z phase=RA done JacksonDatabind 99 exit=0
+2026-09-21T15:37:11Z phase=RA start Lang 23 max-cycles=40 model=deepseek-chat
+2026-09-21T15:48:51Z phase=RA done Lang 23 exit=0
+2026-09-21T15:48:51Z phase=RA start Math 4 max-cycles=40 model=deepseek-chat
+2026-09-21T15:50:55Z phase=RA done Math 4 exit=0
+2026-09-21T15:50:55Z phase=RA start Math 83 max-cycles=40 model=deepseek-chat
+2026-09-21T16:18:55Z phase=RA done Math 83 exit=0
+2026-09-21T16:18:55Z phase=RA start Mockito 9 max-cycles=40 model=deepseek-chat
+2026-09-21T17:01:34Z phase=RA done Mockito 9 exit=0
+2026-09-21T17:01:34Z phase=RA start Mockito 24 max-cycles=40 model=deepseek-chat
+2026-09-21T17:31:40Z phase=RA done Mockito 24 exit=0
+2026-09-21T17:31:40Z run_remaining_compare finished cr=0 ra=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] failed=0
+2026-09-21T18:01:51Z run_remaining_compare start
+2026-09-21T18:01:51Z phase=CR start remaining sample_all
+2026-09-21T18:23:09Z phase=CR done exit=0
+2026-09-21T18:23:09Z phase=RA skip Closure 19 already recorded
+2026-09-21T18:23:09Z phase=RA skip Closure 38 already recorded
+2026-09-21T18:23:09Z phase=RA skip Closure 97 already recorded
+2026-09-21T18:23:09Z phase=RA skip JacksonDatabind 69 already recorded
+2026-09-21T18:23:09Z phase=RA skip JacksonDatabind 99 already recorded
+2026-09-21T18:23:09Z phase=RA skip Lang 23 already recorded
+2026-09-21T18:23:09Z phase=RA skip Math 4 already recorded
+2026-09-21T18:23:09Z phase=RA skip Math 83 already recorded
+2026-09-21T18:23:09Z phase=RA skip Mockito 9 already recorded
+2026-09-21T18:23:09Z phase=RA skip Mockito 24 already recorded
+2026-09-21T18:23:09Z phase=RA start Cli 18 max-cycles=40 model=deepseek-chat
+2026-09-21T18:37:53Z phase=RA done Cli 18 exit=0
+2026-09-21T18:37:53Z phase=RA start Closure 107 max-cycles=40 model=deepseek-chat
+2026-09-21T18:41:32Z phase=RA done Closure 107 exit=0
+2026-09-21T18:41:32Z phase=RA start Closure 121 max-cycles=40 model=deepseek-chat
+2026-09-21T18:48:00Z phase=RA done Closure 121 exit=0
+2026-09-21T18:48:00Z phase=RA start Collections 21 max-cycles=40 model=deepseek-chat
+2026-09-21T18:48:33Z phase=RA done Collections 21 exit=0
+2026-09-21T18:48:33Z phase=RA start JacksonDatabind 1 max-cycles=40 model=deepseek-chat
+2026-09-21T19:02:14Z phase=RA done JacksonDatabind 1 exit=0
+2026-09-21T19:02:14Z phase=RA start JacksonDatabind 2 max-cycles=40 model=deepseek-chat
+2026-09-21T19:26:33Z phase=RA done JacksonDatabind 2 exit=0
+2026-09-21T19:26:33Z phase=RA start JacksonDatabind 5 max-cycles=40 model=deepseek-chat
+2026-09-21T19:34:29Z phase=RA done JacksonDatabind 5 exit=0
+2026-09-21T19:34:29Z phase=RA start JacksonDatabind 72 max-cycles=40 model=deepseek-chat
+2026-09-21T19:44:22Z phase=RA done JacksonDatabind 72 exit=0
+2026-09-21T19:44:22Z phase=RA start JacksonDatabind 94 max-cycles=40 model=deepseek-chat
+2026-09-21T20:03:47Z phase=RA done JacksonDatabind 94 exit=0
+2026-09-21T20:03:47Z phase=RA start Jsoup 5 max-cycles=40 model=deepseek-chat
+2026-09-22T05:51:28Z phase=RA done Jsoup 5 exit=-15
+2026-09-22T05:51:28Z phase=RA start Jsoup 41 max-cycles=40 model=deepseek-chat
+2026-09-22T05:51:36Z run_remaining_compare start
+2026-09-22T05:51:36Z phase=CR start remaining sample_all
+2026-09-22T05:51:36Z phase=CR done exit=0
+2026-09-22T05:51:36Z phase=RA skip Closure 19 already recorded
+2026-09-22T05:51:36Z phase=RA skip Closure 38 already recorded
+2026-09-22T05:51:36Z phase=RA skip Closure 97 already recorded
+2026-09-22T05:51:36Z phase=RA skip JacksonDatabind 69 already recorded
+2026-09-22T05:51:36Z phase=RA skip JacksonDatabind 99 already recorded
+2026-09-22T05:51:36Z phase=RA skip Lang 23 already recorded
+2026-09-22T05:51:36Z phase=RA skip Math 4 already recorded
+2026-09-22T05:51:36Z phase=RA skip Math 83 already recorded
+2026-09-22T05:51:36Z phase=RA skip Mockito 9 already recorded
+2026-09-22T05:51:36Z phase=RA skip Mockito 24 already recorded
+2026-09-22T05:51:36Z phase=RA skip Cli 18 already recorded
+2026-09-22T05:51:36Z phase=RA skip Closure 107 already recorded
+2026-09-22T05:51:36Z phase=RA skip Closure 121 already recorded
+2026-09-22T05:51:36Z phase=RA skip Collections 21 already recorded
+2026-09-22T05:51:36Z phase=RA skip JacksonDatabind 1 already recorded
+2026-09-22T05:51:36Z phase=RA skip JacksonDatabind 2 already recorded
+2026-09-22T05:51:36Z phase=RA skip JacksonDatabind 5 already recorded
+2026-09-22T05:51:36Z phase=RA skip JacksonDatabind 72 already recorded
+2026-09-22T05:51:36Z phase=RA skip JacksonDatabind 94 already recorded
+2026-09-22T05:51:36Z phase=RA skip Jsoup 5 already recorded
+2026-09-22T05:51:36Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:52:06Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:52:36Z run_remaining_compare start
+2026-09-22T05:52:36Z phase=CR start remaining sample_all
+2026-09-22T05:52:36Z phase=CR done exit=0
+2026-09-22T05:52:36Z phase=RA skip Closure 19 already recorded
+2026-09-22T05:52:36Z phase=RA skip Closure 38 already recorded
+2026-09-22T05:52:36Z phase=RA skip Closure 97 already recorded
+2026-09-22T05:52:36Z phase=RA skip JacksonDatabind 69 already recorded
+2026-09-22T05:52:36Z phase=RA skip JacksonDatabind 99 already recorded
+2026-09-22T05:52:36Z phase=RA skip Lang 23 already recorded
+2026-09-22T05:52:36Z phase=RA skip Math 4 already recorded
+2026-09-22T05:52:36Z phase=RA skip Math 83 already recorded
+2026-09-22T05:52:36Z phase=RA skip Mockito 9 already recorded
+2026-09-22T05:52:36Z phase=RA skip Mockito 24 already recorded
+2026-09-22T05:52:36Z phase=RA skip Cli 18 already recorded
+2026-09-22T05:52:36Z phase=RA skip Closure 107 already recorded
+2026-09-22T05:52:36Z phase=RA skip Closure 121 already recorded
+2026-09-22T05:52:36Z phase=RA skip Collections 21 already recorded
+2026-09-22T05:52:36Z phase=RA skip JacksonDatabind 1 already recorded
+2026-09-22T05:52:36Z phase=RA skip JacksonDatabind 2 already recorded
+2026-09-22T05:52:36Z phase=RA skip JacksonDatabind 5 already recorded
+2026-09-22T05:52:36Z phase=RA skip JacksonDatabind 72 already recorded
+2026-09-22T05:52:36Z phase=RA skip JacksonDatabind 94 already recorded
+2026-09-22T05:52:36Z phase=RA skip Jsoup 5 already recorded
+2026-09-22T05:52:36Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:53:06Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:53:36Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:54:06Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:54:36Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:55:06Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:55:36Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:56:06Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:56:36Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:57:06Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:57:36Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:58:06Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:58:36Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:59:06Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T05:59:36Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T06:00:06Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T06:00:36Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T06:01:06Z phase=RA wait existing repairagent before Jsoup 41
+2026-09-22T06:01:36Z phase=RA skip Jsoup 41 already finished by existing process
+2026-09-22T06:01:37Z phase=RA start Jsoup 48 max-cycles=40 model=deepseek-chat
+2026-09-22T06:02:51Z phase=RA done Jsoup 48 exit=0
+2026-09-22T06:02:51Z phase=RA start Jsoup 81 max-cycles=40 model=deepseek-chat
+2026-09-22T06:04:16Z phase=RA done Jsoup 81 exit=0
+2026-09-22T06:04:16Z phase=RA start Lang 35 max-cycles=40 model=deepseek-chat
+2026-09-22T06:05:28Z phase=RA done Lang 35 exit=-15
+2026-09-22T06:05:28Z phase=RA start Math 8 max-cycles=40 model=deepseek-chat
+2026-09-22T06:05:46Z run_remaining_compare start
+2026-09-22T06:05:46Z halt requested — summarize and stop, no more RA bugs
+2026-09-22T07:26:35Z run_remaining_compare start
+2026-09-22T07:26:35Z phase=CR start remaining sample_all
+2026-09-22T07:26:35Z phase=CR done exit=0
+2026-09-22T07:26:35Z phase=RA skip Closure 19 already recorded
+2026-09-22T07:26:35Z phase=RA skip Closure 38 already recorded
+2026-09-22T07:26:35Z phase=RA skip Closure 97 already recorded
+2026-09-22T07:26:35Z phase=RA skip JacksonDatabind 69 already recorded
+2026-09-22T07:26:35Z phase=RA skip JacksonDatabind 99 already recorded
+2026-09-22T07:26:35Z phase=RA skip Lang 23 already recorded
+2026-09-22T07:26:35Z phase=RA skip Math 4 already recorded
+2026-09-22T07:26:35Z phase=RA skip Math 83 already recorded
+2026-09-22T07:26:35Z phase=RA skip Mockito 9 already recorded
+2026-09-22T07:26:35Z phase=RA skip Mockito 24 already recorded
+2026-09-22T07:26:35Z phase=RA skip Cli 18 already recorded
+2026-09-22T07:26:35Z phase=RA skip Closure 107 already recorded
+2026-09-22T07:26:35Z phase=RA skip Closure 121 already recorded
+2026-09-22T07:26:35Z phase=RA skip Collections 21 already recorded
+2026-09-22T07:26:35Z phase=RA skip JacksonDatabind 1 already recorded
+2026-09-22T07:26:35Z phase=RA skip JacksonDatabind 2 already recorded
+2026-09-22T07:26:35Z phase=RA skip JacksonDatabind 5 already recorded
+2026-09-22T07:26:35Z phase=RA skip JacksonDatabind 72 already recorded
+2026-09-22T07:26:35Z phase=RA skip JacksonDatabind 94 already recorded
+2026-09-22T07:26:35Z phase=RA skip Jsoup 5 already recorded
+2026-09-22T07:26:35Z phase=RA skip Jsoup 41 already recorded
+2026-09-22T07:26:35Z phase=RA skip Jsoup 48 already recorded
+2026-09-22T07:26:35Z phase=RA skip Jsoup 81 already recorded
+2026-09-22T07:26:35Z phase=RA start Lang 35 max-cycles=40 model=deepseek-chat
+2026-09-22T08:52:05Z phase=RA done Lang 35 exit=0
+2026-09-22T08:52:05Z phase=RA start Math 8 max-cycles=40 model=deepseek-chat
+2026-09-22T09:24:55Z phase=RA done Math 8 exit=0
+2026-09-22T09:24:55Z run_remaining_compare finished cr=0 ra=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] failed=0

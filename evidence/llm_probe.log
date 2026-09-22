@@ -1,0 +1,8 @@
+key_source=/workspace/report_reproduct/.env
+key_present=True
+key_len=35
+api_base=https://api.deepseek.com
+model=deepseek-chat
+result=OK
+reply_len=4
+reply_head=pong

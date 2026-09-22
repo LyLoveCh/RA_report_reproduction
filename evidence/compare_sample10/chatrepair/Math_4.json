@@ -1,0 +1,35 @@
+{
+  "bug": "Math 4",
+  "plausible": true,
+  "model": "deepseek-chat",
+  "triggering_tests": [
+    "org.apache.commons.math3.geometry.euclidean.threed.SubLineTest::testIntersectionNotIntersecting",
+    "org.apache.commons.math3.geometry.euclidean.twod.SubLineTest::testIntersectionParallel"
+  ],
+  "rounds": 1,
+  "seconds": 54.3,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "src/main/java/org/apache/commons/math3/geometry/euclidean/twod/SubLine.java",
+          "action": "insert_after",
+          "line": 117,
+          "text": "        if (v2D == null) {\n            return null;\n        }\n"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/math3/geometry/euclidean/threed/SubLine.java",
+          "action": "insert_after",
+          "line": 113,
+          "text": "        if (v1D == null) {\n            return null;\n        }\n"
+        }
+      ],
+      "apply": "insert_after src/main/java/org/apache/commons/math3/geometry/euclidean/twod/SubLine.java#117; insert_after src/main/java/org/apache/commons/math3/geometry/euclidean/threed/SubLine.java#113",
+      "trigger_pass": true,
+      "reply_head": "{\"edits\":[{\"file\":\"src/main/java/org/apache/commons/math3/geometry/euclidean/twod/SubLine.java\",\"action\":\"insert_after\",\"line\":117,\"text\":\"        if (v2D == null) {\\n            return null;\\n        }\\n\"},{\"file\":\"src/main/java/org/apache/commons/math3/geometry/euclidean/threed/SubLine.java\",\"action\":\"insert_after\",\"line\":113,\"text\":\"        if (v1D == null) {\\n            return null;\\n        }\\n\"}]}",
+      "full_pass": true,
+      "full_log_tail": "Failing tests: 0\n\nRunning ant (compile.tests)................................................ OK\nRunning ant (run.dev.tests)................................................ OK\n\n"
+    }
+  ]
+}

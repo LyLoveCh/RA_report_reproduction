@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="710" height="918" viewBox="0 0 710 918">
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="20" y="28" font-size="18" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">同一 DeepSeek，两种流水线（N=25，不是 Table III）</text>
+<text x="28" y="70" font-size="12" font-family="ui-sans-serif,system-ui,sans-serif" fill="#475467">Bug</text>
+<text x="198" y="70" font-size="12" font-family="ui-sans-serif,system-ui,sans-serif" fill="#475467">论文 RA164</text>
+<text x="308" y="70" font-size="12" font-family="ui-sans-serif,system-ui,sans-serif" fill="#475467">论文 CR162</text>
+<text x="418" y="70" font-size="12" font-family="ui-sans-serif,system-ui,sans-serif" fill="#475467">本次 CR</text>
+<text x="558" y="70" font-size="12" font-family="ui-sans-serif,system-ui,sans-serif" fill="#475467">本次 RA</text>
+<text x="28" y="103" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Closure 19</text>
+<rect x="196.0" y="86.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="103.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="86.0" width="98.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="355.0" y="103.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到</text>
+<rect x="416.0" y="86.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="480.0" y="103.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·1</text>
+<rect x="556.0" y="86.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="620.0" y="103.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·26</text>
+<text x="28" y="135" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Closure 38</text>
+<rect x="196.0" y="118.0" width="98.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="245.0" y="135.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到</text>
+<rect x="306.0" y="118.0" width="98.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="355.0" y="135.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到</text>
+<rect x="416.0" y="118.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="480.0" y="135.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·1</text>
+<rect x="556.0" y="118.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="620.0" y="135.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·4</text>
+<text x="28" y="167" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Closure 97</text>
+<rect x="196.0" y="150.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="167.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="150.0" width="98.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="355.0" y="167.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到</text>
+<rect x="416.0" y="150.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="480.0" y="167.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·1</text>
+<rect x="556.0" y="150.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="620.0" y="167.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·4</text>
+<text x="28" y="199" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">JacksonDatabind 69</text>
+<rect x="196.0" y="182.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="199.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="182.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="199.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="182.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="480.0" y="199.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·12</text>
+<rect x="556.0" y="182.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="620.0" y="199.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·40</text>
+<text x="28" y="231" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">JacksonDatabind 99</text>
+<rect x="196.0" y="214.0" width="98.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="245.0" y="231.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到</text>
+<rect x="306.0" y="214.0" width="98.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="355.0" y="231.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到</text>
+<rect x="416.0" y="214.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="480.0" y="231.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·1</text>
+<rect x="556.0" y="214.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="620.0" y="231.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·4</text>
+<text x="28" y="263" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Lang 23</text>
+<rect x="196.0" y="246.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="263.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="246.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="263.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="246.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="480.0" y="263.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·12</text>
+<rect x="556.0" y="246.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="620.0" y="263.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·21</text>
+<text x="28" y="295" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Math 4</text>
+<rect x="196.0" y="278.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="295.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="278.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="295.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="278.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="480.0" y="295.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·1</text>
+<rect x="556.0" y="278.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="620.0" y="295.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·5</text>
+<text x="28" y="327" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Math 83</text>
+<rect x="196.0" y="310.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="327.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="310.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="327.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="310.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="480.0" y="327.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·2</text>
+<rect x="556.0" y="310.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="620.0" y="327.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·12</text>
+<text x="28" y="359" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Mockito 9</text>
+<rect x="196.0" y="342.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="359.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="342.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="359.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="342.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="480.0" y="359.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·12</text>
+<rect x="556.0" y="342.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="620.0" y="359.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·40</text>
+<text x="28" y="391" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Mockito 24</text>
+<rect x="196.0" y="374.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="391.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="374.0" width="98.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="355.0" y="391.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到</text>
+<rect x="416.0" y="374.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="480.0" y="391.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·2</text>
+<rect x="556.0" y="374.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="620.0" y="391.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·40</text>
+<text x="28" y="423" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Cli 18</text>
+<rect x="196.0" y="406.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="423.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="406.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="423.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="406.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="480.0" y="423.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·2</text>
+<rect x="556.0" y="406.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="620.0" y="423.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·40</text>
+<text x="28" y="455" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Closure 107</text>
+<rect x="196.0" y="438.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="455.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="438.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="455.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="438.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="480.0" y="455.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·12</text>
+<rect x="556.0" y="438.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="620.0" y="455.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·40</text>
+<text x="28" y="487" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Closure 121</text>
+<rect x="196.0" y="470.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="487.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="470.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="487.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="470.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="480.0" y="487.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·12</text>
+<rect x="556.0" y="470.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="620.0" y="487.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·40</text>
+<text x="28" y="519" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Collections 21</text>
+<rect x="196.0" y="502.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="519.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="502.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="519.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="502.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="480.0" y="519.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·12</text>
+<rect x="556.0" y="502.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="620.0" y="519.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·7</text>
+<text x="28" y="551" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">JacksonDatabind 1</text>
+<rect x="196.0" y="534.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="551.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="534.0" width="98.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="355.0" y="551.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到</text>
+<rect x="416.0" y="534.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="480.0" y="551.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·2</text>
+<rect x="556.0" y="534.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="620.0" y="551.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·4</text>
+<text x="28" y="583" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">JacksonDatabind 2</text>
+<rect x="196.0" y="566.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="583.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="566.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="583.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="566.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="480.0" y="583.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·12</text>
+<rect x="556.0" y="566.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="620.0" y="583.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·40</text>
+<text x="28" y="615" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">JacksonDatabind 5</text>
+<rect x="196.0" y="598.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="615.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="598.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="615.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="598.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="480.0" y="615.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·12</text>
+<rect x="556.0" y="598.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="620.0" y="615.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·40</text>
+<text x="28" y="647" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">JacksonDatabind 72</text>
+<rect x="196.0" y="630.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="647.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="630.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="647.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="630.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="480.0" y="647.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·1</text>
+<rect x="556.0" y="630.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="620.0" y="647.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·10</text>
+<text x="28" y="679" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">JacksonDatabind 94</text>
+<rect x="196.0" y="662.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="679.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="662.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="679.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="662.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="480.0" y="679.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·12</text>
+<rect x="556.0" y="662.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="620.0" y="679.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·40</text>
+<text x="28" y="711" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Jsoup 5</text>
+<rect x="196.0" y="694.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="711.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="694.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="711.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="694.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="480.0" y="711.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·12</text>
+<rect x="556.0" y="694.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="620.0" y="711.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·7</text>
+<text x="28" y="743" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Jsoup 41</text>
+<rect x="196.0" y="726.0" width="98.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="245.0" y="743.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到</text>
+<rect x="306.0" y="726.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="743.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="726.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="480.0" y="743.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·1</text>
+<rect x="556.0" y="726.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="620.0" y="743.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·40</text>
+<text x="28" y="775" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Jsoup 48</text>
+<rect x="196.0" y="758.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="775.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="758.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="775.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="758.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="480.0" y="775.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·12</text>
+<rect x="556.0" y="758.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="620.0" y="775.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·7</text>
+<text x="28" y="807" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Jsoup 81</text>
+<rect x="196.0" y="790.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="807.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="790.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="807.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="790.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="480.0" y="807.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·12</text>
+<rect x="556.0" y="790.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="620.0" y="807.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·17</text>
+<text x="28" y="839" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Lang 35</text>
+<rect x="196.0" y="822.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="839.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="822.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="839.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="822.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="480.0" y="839.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·12</text>
+<rect x="556.0" y="822.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="620.0" y="839.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·40</text>
+<text x="28" y="871" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif" fill="#101828">Math 8</text>
+<rect x="196.0" y="854.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="245.0" y="871.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="306.0" y="854.0" width="98.0" height="24.0" rx="6" fill="#b42318"/><text x="355.0" y="871.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修</text>
+<rect x="416.0" y="854.0" width="128.0" height="24.0" rx="6" fill="#b42318"/><text x="480.0" y="871.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">未修·12</text>
+<rect x="556.0" y="854.0" width="128.0" height="24.0" rx="6" fill="#1b7f4e"/><text x="620.0" y="871.0" text-anchor="middle" fill="#fff" font-size="13" font-family="ui-sans-serif,system-ui,sans-serif">修到·40</text>
+</svg>

@@ -1,0 +1,177 @@
+[
+  {
+    "bug": "Closure 19",
+    "plausible": true,
+    "rounds": 1,
+    "seconds": 62.4,
+    "error": null
+  },
+  {
+    "bug": "Closure 38",
+    "plausible": true,
+    "rounds": 1,
+    "seconds": 60.4,
+    "error": null
+  },
+  {
+    "bug": "Closure 97",
+    "plausible": true,
+    "rounds": 1,
+    "seconds": 32.6,
+    "error": null
+  },
+  {
+    "bug": "JacksonDatabind 69",
+    "plausible": false,
+    "rounds": 12,
+    "seconds": 53.8,
+    "error": null
+  },
+  {
+    "bug": "JacksonDatabind 99",
+    "plausible": true,
+    "rounds": 1,
+    "seconds": 46.2,
+    "error": null
+  },
+  {
+    "bug": "Lang 23",
+    "plausible": false,
+    "rounds": 12,
+    "seconds": 35.0,
+    "error": null
+  },
+  {
+    "bug": "Math 4",
+    "plausible": true,
+    "rounds": 1,
+    "seconds": 54.3,
+    "error": null
+  },
+  {
+    "bug": "Math 83",
+    "plausible": true,
+    "rounds": 2,
+    "seconds": 25.8,
+    "error": null
+  },
+  {
+    "bug": "Mockito 9",
+    "plausible": false,
+    "rounds": 12,
+    "seconds": 1178.4,
+    "error": null
+  },
+  {
+    "bug": "Mockito 24",
+    "plausible": true,
+    "rounds": 2,
+    "seconds": 91.7,
+    "error": null
+  },
+  {
+    "bug": "Cli 18",
+    "plausible": true,
+    "rounds": 2,
+    "seconds": 12.9,
+    "error": null
+  },
+  {
+    "bug": "Closure 107",
+    "plausible": false,
+    "rounds": 12,
+    "seconds": 76.7,
+    "error": null
+  },
+  {
+    "bug": "Closure 121",
+    "plausible": false,
+    "rounds": 12,
+    "seconds": 492.3,
+    "error": null
+  },
+  {
+    "bug": "Collections 21",
+    "plausible": false,
+    "rounds": 12,
+    "seconds": 39.1,
+    "error": null
+  },
+  {
+    "bug": "JacksonDatabind 1",
+    "plausible": true,
+    "rounds": 2,
+    "seconds": 30.2,
+    "error": null
+  },
+  {
+    "bug": "JacksonDatabind 2",
+    "plausible": false,
+    "rounds": 12,
+    "seconds": 283.9,
+    "error": null
+  },
+  {
+    "bug": "JacksonDatabind 5",
+    "plausible": false,
+    "rounds": 12,
+    "seconds": 46.7,
+    "error": null
+  },
+  {
+    "bug": "JacksonDatabind 72",
+    "plausible": true,
+    "rounds": 1,
+    "seconds": 42.8,
+    "error": null
+  },
+  {
+    "bug": "JacksonDatabind 94",
+    "plausible": false,
+    "rounds": 12,
+    "seconds": 36.8,
+    "error": null
+  },
+  {
+    "bug": "Jsoup 5",
+    "plausible": false,
+    "rounds": 12,
+    "seconds": 30.8,
+    "error": null
+  },
+  {
+    "bug": "Jsoup 41",
+    "plausible": true,
+    "rounds": 1,
+    "seconds": 10.1,
+    "error": null
+  },
+  {
+    "bug": "Jsoup 48",
+    "plausible": false,
+    "rounds": 12,
+    "seconds": 40.9,
+    "error": null
+  },
+  {
+    "bug": "Jsoup 81",
+    "plausible": false,
+    "rounds": 12,
+    "seconds": 28.9,
+    "error": null
+  },
+  {
+    "bug": "Lang 35",
+    "plausible": false,
+    "rounds": 12,
+    "seconds": 44.0,
+    "error": null
+  },
+  {
+    "bug": "Math 8",
+    "plausible": false,
+    "rounds": 12,
+    "seconds": 61.8,
+    "error": null
+  }
+]

@@ -1,0 +1,182 @@
+{
+  "bug": "Mockito 9",
+  "plausible": false,
+  "model": "deepseek-chat",
+  "triggering_tests": [
+    "org.mockitousage.constructor.CreatingMocksWithConstructorTest::abstractMethodStubbed",
+    "org.mockitousage.constructor.CreatingMocksWithConstructorTest::testCallsRealInterfaceMethod",
+    "org.mockitousage.constructor.CreatingMocksWithConstructorTest::abstractMethodReturnsDefault"
+  ],
+  "rounds": 12,
+  "seconds": 1178.4,
+  "history": [
+    {
+      "round": 1,
+      "edits": [
+        {
+          "file": "org/mockito/internal/stubbing/answers/CallsRealMethods.java",
+          "action": "replace",
+          "line": 36,
+          "text": "        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\n            invocation.callRealMethod();\n            return null;\n        }\n        return invocation.callRealMethod();"
+        }
+      ],
+      "apply": "replace src/org/mockito/internal/stubbing/answers/CallsRealMethods.java#36",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/mockito/internal/stubbing/answers/CallsRealMethods.java\",\"action\":\"replace\",\"line\":36,\"text\":\"        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\\n            invocation.callRealMethod();\\n            return null;\\n        }\\n        return invocation.callRealMethod();\"}]}"
+    },
+    {
+      "round": 2,
+      "edits": [
+        {
+          "file": "org/mockito/internal/stubbing/answers/CallsRealMethods.java",
+          "action": "replace",
+          "line": 36,
+          "text": "        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\n            invocation.callRealMethod();\n            return null;\n        }\n        return invocation.callRealMethod();"
+        }
+      ],
+      "apply": "replace src/org/mockito/internal/stubbing/answers/CallsRealMethods.java#36",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/mockito/internal/stubbing/answers/CallsRealMethods.java\",\"action\":\"replace\",\"line\":36,\"text\":\"        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\\n            invocation.callRealMethod();\\n            return null;\\n        }\\n        return invocation.callRealMethod();\"}]}"
+    },
+    {
+      "round": 3,
+      "edits": [
+        {
+          "file": "org/mockito/internal/stubbing/answers/CallsRealMethods.java",
+          "action": "replace",
+          "line": 36,
+          "text": "        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\n            invocation.callRealMethod();\n            return null;\n        }\n        return invocation.callRealMethod();"
+        }
+      ],
+      "apply": "replace src/org/mockito/internal/stubbing/answers/CallsRealMethods.java#36",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/mockito/internal/stubbing/answers/CallsRealMethods.java\",\"action\":\"replace\",\"line\":36,\"text\":\"        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\\n            invocation.callRealMethod();\\n            return null;\\n        }\\n        return invocation.callRealMethod();\"}]}"
+    },
+    {
+      "round": 4,
+      "edits": [
+        {
+          "file": "org/mockito/internal/stubbing/answers/CallsRealMethods.java",
+          "action": "replace",
+          "line": 36,
+          "text": "        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\n            invocation.callRealMethod();\n            return null;\n        }\n        return invocation.callRealMethod();"
+        }
+      ],
+      "apply": "replace src/org/mockito/internal/stubbing/answers/CallsRealMethods.java#36",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/mockito/internal/stubbing/answers/CallsRealMethods.java\",\"action\":\"replace\",\"line\":36,\"text\":\"        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\\n            invocation.callRealMethod();\\n            return null;\\n        }\\n        return invocation.callRealMethod();\"}]}"
+    },
+    {
+      "round": 5,
+      "edits": [
+        {
+          "file": "org/mockito/internal/stubbing/answers/CallsRealMethods.java",
+          "action": "replace",
+          "line": 36,
+          "text": "        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\n            invocation.callRealMethod();\n            return null;\n        }\n        return invocation.callRealMethod();"
+        }
+      ],
+      "apply": "replace src/org/mockito/internal/stubbing/answers/CallsRealMethods.java#36",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/mockito/internal/stubbing/answers/CallsRealMethods.java\",\"action\":\"replace\",\"line\":36,\"text\":\"        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\\n            invocation.callRealMethod();\\n            return null;\\n        }\\n        return invocation.callRealMethod();\"}]}"
+    },
+    {
+      "round": 6,
+      "edits": [
+        {
+          "file": "org/mockito/internal/stubbing/answers/CallsRealMethods.java",
+          "action": "replace",
+          "line": 36,
+          "text": "        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\n            invocation.callRealMethod();\n            return null;\n        }\n        return invocation.callRealMethod();"
+        }
+      ],
+      "apply": "replace src/org/mockito/internal/stubbing/answers/CallsRealMethods.java#36",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/mockito/internal/stubbing/answers/CallsRealMethods.java\",\"action\":\"replace\",\"line\":36,\"text\":\"        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\\n            invocation.callRealMethod();\\n            return null;\\n        }\\n        return invocation.callRealMethod();\"}]}"
+    },
+    {
+      "round": 7,
+      "edits": [
+        {
+          "file": "org/mockito/internal/stubbing/answers/CallsRealMethods.java",
+          "action": "replace",
+          "line": 36,
+          "text": "        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\n            invocation.callRealMethod();\n            return null;\n        }\n        return invocation.callRealMethod();"
+        }
+      ],
+      "apply": "replace src/org/mockito/internal/stubbing/answers/CallsRealMethods.java#36",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/mockito/internal/stubbing/answers/CallsRealMethods.java\",\"action\":\"replace\",\"line\":36,\"text\":\"        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\\n            invocation.callRealMethod();\\n            return null;\\n        }\\n        return invocation.callRealMethod();\"}]}"
+    },
+    {
+      "round": 8,
+      "edits": [
+        {
+          "file": "org/mockito/internal/stubbing/answers/CallsRealMethods.java",
+          "action": "replace",
+          "line": 36,
+          "text": "        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\n            invocation.callRealMethod();\n            return null;\n        }\n        return invocation.callRealMethod();"
+        }
+      ],
+      "apply": "replace src/org/mockito/internal/stubbing/answers/CallsRealMethods.java#36",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/mockito/internal/stubbing/answers/CallsRealMethods.java\",\"action\":\"replace\",\"line\":36,\"text\":\"        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\\n            invocation.callRealMethod();\\n            return null;\\n        }\\n        return invocation.callRealMethod();\"}]}"
+    },
+    {
+      "round": 9,
+      "edits": [
+        {
+          "file": "org/mockito/internal/stubbing/answers/CallsRealMethods.java",
+          "action": "replace",
+          "line": 36,
+          "text": "        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\n            invocation.callRealMethod();\n            return null;\n        }\n        return invocation.callRealMethod();"
+        }
+      ],
+      "apply": "replace src/org/mockito/internal/stubbing/answers/CallsRealMethods.java#36",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/mockito/internal/stubbing/answers/CallsRealMethods.java\",\"action\":\"replace\",\"line\":36,\"text\":\"        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\\n            invocation.callRealMethod();\\n            return null;\\n        }\\n        return invocation.callRealMethod();\"}]}"
+    },
+    {
+      "round": 10,
+      "edits": [
+        {
+          "file": "org/mockito/internal/stubbing/answers/CallsRealMethods.java",
+          "action": "replace",
+          "line": 36,
+          "text": "        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\n            invocation.callRealMethod();\n            return null;\n        }\n        return invocation.callRealMethod();"
+        }
+      ],
+      "apply": "replace src/org/mockito/internal/stubbing/answers/CallsRealMethods.java#36",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/mockito/internal/stubbing/answers/CallsRealMethods.java\",\"action\":\"replace\",\"line\":36,\"text\":\"        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\\n            invocation.callRealMethod();\\n            return null;\\n        }\\n        return invocation.callRealMethod();\"}]}"
+    },
+    {
+      "round": 11,
+      "edits": [
+        {
+          "file": "org/mockito/internal/stubbing/answers/CallsRealMethods.java",
+          "action": "replace",
+          "line": 36,
+          "text": "        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\n            invocation.callRealMethod();\n            return null;\n        }\n        return invocation.callRealMethod();"
+        }
+      ],
+      "apply": "replace src/org/mockito/internal/stubbing/answers/CallsRealMethods.java#36",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/mockito/internal/stubbing/answers/CallsRealMethods.java\",\"action\":\"replace\",\"line\":36,\"text\":\"        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\\n            invocation.callRealMethod();\\n            return null;\\n        }\\n        return invocation.callRealMethod();\"}]}"
+    },
+    {
+      "round": 12,
+      "edits": [
+        {
+          "file": "org/mockito/internal/stubbing/answers/CallsRealMethods.java",
+          "action": "replace",
+          "line": 36,
+          "text": "        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\n            invocation.callRealMethod();\n            return null;\n        }\n        return invocation.callRealMethod();"
+        }
+      ],
+      "apply": "replace src/org/mockito/internal/stubbing/answers/CallsRealMethods.java#36",
+      "trigger_pass": false,
+      "reply_head": "{\"edits\":[{\"file\":\"org/mockito/internal/stubbing/answers/CallsRealMethods.java\",\"action\":\"replace\",\"line\":36,\"text\":\"        if (invocation.getMethod().getReturnType().equals(Void.TYPE)) {\\n            invocation.callRealMethod();\\n            return null;\\n        }\\n        return invocation.callRealMethod();\"}]}"
+    }
+  ]
+}

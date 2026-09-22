@@ -1,0 +1,16 @@
+.venv/
+venv/
+vendor/
+.env
+!.env.example
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+evidence/tmp/
+evidence/supervise/*.txt
+evidence/supervise/*.log
+evidence/supervise/*.pid
+*.class
+demos/chart1_mini/Chart1Mini.class

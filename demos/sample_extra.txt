@@ -1,0 +1,15 @@
+Cli 18
+Closure 107
+Closure 121
+Collections 21
+JacksonDatabind 1
+JacksonDatabind 2
+JacksonDatabind 5
+JacksonDatabind 72
+JacksonDatabind 94
+Jsoup 5
+Jsoup 41
+Jsoup 48
+Jsoup 81
+Lang 35
+Math 8
