@@ -15,14 +15,7 @@
     .note p { margin: 0; color: inherit; }
     nav { position: sticky; top: 0; background: #fff; padding: 10px 0; border-bottom: 1px solid #e4e7ec; display: flex; flex-wrap: wrap; gap: 12px; font-size: 14px; }
     .legend { color: #667085; font-size: 13px; }
-    .fsm { display: flex; align-items: center; gap: 10px; margin: 18px 0 8px; flex-wrap: wrap; }
-    .state { min-width: 132px; border: 1px solid #d0d5dd; border-radius: 12px; padding: 12px 14px 10px; background: #fff; text-align: center; }
-    .state b { display: block; font-size: 16px; }
-    .state span { display: block; color: #667085; font-size: 12px; margin-top: 2px; }
-    .state.here { border: 2px dashed #1570ef; }
-    .arrow { color: #101828; font-size: 13px; font-weight: 700; display: flex; flex-direction: column; align-items: center; min-width: 88px; }
-    .arrow i { font-style: normal; font-size: 22px; line-height: 1; }
-    .loop { font-size: 13px; color: #101828; margin: 0 0 -6px 18px; }
+    img.fsm { width: 100%; height: auto; margin: 8px 0 4px; }
     table { border-collapse: collapse; width: 100%; font-size: 14px; margin: 8px 0 16px; }
     th, td { border-bottom: 1px solid #e4e7ec; padding: 8px 10px; text-align: left; }
     th { color: #475467; font-weight: 600; }
@@ -52,13 +45,7 @@
   <h2 id="c1">Cycle 1 · 开始时在 Understand · <code>read_range</code></h2>
   <p>还在 Understand。先读 3D 的 intersection。<code>read_range</code> 不改状态，所以自环。</p>
   <p class="legend">虚线框 = 本轮开始时所在状态。加粗箭头 = 本轮走的边。没走的边隐去。</p>
-  <p class="loop">不跳：工具不改状态</p>
-  <div class="fsm">
-    <div class="state here"><b>Understand</b><span>理解 bug</span></div>
-    <div class="state"><b>Collect</b><span>收集修复材料</span></div>
-    <div class="state"><b>Try</b><span>试补丁</span></div>
-    <div class="state"><b>Done</b><span>结束</span></div>
-  </div>
+  <img class="fsm" src="math4/fsm_c1.svg" alt="Cycle 1 状态机"/>
   <p class="label">本态可用工具（官方 prompt，不是论文 Fig.2 那一列）</p>
   <table>
     <tr><th>工具</th><th>干什么</th><th>本轮</th></tr>
@@ -74,13 +61,7 @@
   <h2 id="c2">Cycle 2 · 开始时在 Understand · <code>read_range</code></h2>
   <p>假设还没写。继续读 2D，确认是同一处漏检查。仍留在 Understand。</p>
   <p class="legend">虚线框 = 本轮开始时所在状态。加粗箭头 = 本轮走的边。没走的边隐去。</p>
-  <p class="loop">不跳：工具不改状态</p>
-  <div class="fsm">
-    <div class="state here"><b>Understand</b><span>理解 bug</span></div>
-    <div class="state"><b>Collect</b><span>收集修复材料</span></div>
-    <div class="state"><b>Try</b><span>试补丁</span></div>
-    <div class="state"><b>Done</b><span>结束</span></div>
-  </div>
+  <img class="fsm" src="math4/fsm_c2.svg" alt="Cycle 2 状态机"/>
   <p class="label">本态可用工具（官方 prompt，不是论文 Fig.2 那一列）</p>
   <table>
     <tr><th>工具</th><th>干什么</th><th>本轮</th></tr>
@@ -96,13 +77,7 @@
   <h2 id="c3">Cycle 3 · 开始时在 Understand · <code>express_hypothesis</code></h2>
   <p>材料够了。<code>express_hypothesis</code> 的条件成立，Understand → Collect。</p>
   <p class="legend">虚线框 = 本轮开始时所在状态。加粗箭头 = 本轮走的边。没走的边隐去。</p>
-  <div class="fsm">
-    <div class="state here"><b>Understand</b><span>理解 bug</span></div>
-    <div class="arrow"><span>express_hypothesis</span><i>→</i></div>
-    <div class="state"><b>Collect</b><span>收集修复材料</span></div>
-    <div class="state"><b>Try</b><span>试补丁</span></div>
-    <div class="state"><b>Done</b><span>结束</span></div>
-  </div>
+  <img class="fsm" src="math4/fsm_c3.svg" alt="Cycle 3 状态机"/>
   <p class="label">本态可用工具（官方 prompt，不是论文 Fig.2 那一列）</p>
   <table>
     <tr><th>工具</th><th>干什么</th><th>本轮</th></tr>
@@ -118,13 +93,7 @@
   <h2 id="c4">Cycle 4 · 开始时在 Collect · <code>write_fix</code></h2>
   <p>没有再搜仓库。直接 <code>write_fix</code>。官方实现会自动切到 Try，并跑测试。</p>
   <p class="legend">虚线框 = 本轮开始时所在状态。加粗箭头 = 本轮走的边。没走的边隐去。</p>
-  <div class="fsm">
-    <div class="state"><b>Understand</b><span>理解 bug</span></div>
-    <div class="state here"><b>Collect</b><span>收集修复材料</span></div>
-    <div class="arrow"><span>write_fix（自动切）</span><i>→</i></div>
-    <div class="state"><b>Try</b><span>试补丁</span></div>
-    <div class="state"><b>Done</b><span>结束</span></div>
-  </div>
+  <img class="fsm" src="math4/fsm_c4.svg" alt="Cycle 4 状态机"/>
   <p class="label">本态可用工具（官方 prompt，不是论文 Fig.2 那一列）</p>
   <table>
     <tr><th>工具</th><th>干什么</th><th>本轮</th></tr>
@@ -149,13 +118,7 @@
   <h2 id="c5">Cycle 5 · 开始时在 Try · <code>goals_accomplished</code></h2>
   <p>测已经绿了，但还在 Try。模型自己喊 <code>goals_accomplished</code>，才进 Done。绿不会自动结束。</p>
   <p class="legend">虚线框 = 本轮开始时所在状态。加粗箭头 = 本轮走的边。没走的边隐去。</p>
-  <div class="fsm">
-    <div class="state"><b>Understand</b><span>理解 bug</span></div>
-    <div class="state"><b>Collect</b><span>收集修复材料</span></div>
-    <div class="state here"><b>Try</b><span>试补丁</span></div>
-    <div class="arrow"><span>goals_accomplished</span><i>→</i></div>
-    <div class="state"><b>Done</b><span>结束</span></div>
-  </div>
+  <img class="fsm" src="math4/fsm_c5.svg" alt="Cycle 5 状态机"/>
   <p class="label">本态可用工具（官方 prompt，不是论文 Fig.2 那一列）</p>
   <table>
     <tr><th>工具</th><th>干什么</th><th>本轮</th></tr>

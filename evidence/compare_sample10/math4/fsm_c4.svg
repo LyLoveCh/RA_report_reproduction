@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1244" height="196" viewBox="0 0 1244 196">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<defs>
+  <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+    <path d="M 0 1.2 L 10 5 L 0 8.8 z" fill="#101828"/>
+  </marker>
+</defs>
+<rect x="16" y="100" width="180" height="72" rx="14" fill="#fff" stroke="#d0d5dd" stroke-width="1.5"/>
+<text x="106" y="130" text-anchor="middle" font-size="16" font-weight="700" font-family="Segoe UI, Microsoft YaHei, sans-serif" fill="#101828">Understand</text>
+<text x="106" y="150" text-anchor="middle" font-size="12" font-family="Segoe UI, Microsoft YaHei, sans-serif" fill="#667085">理解 bug</text>
+<rect x="360" y="100" width="180" height="72" rx="14" fill="#fff" stroke="#1570ef" stroke-width="2.4" stroke-dasharray="7 5"/>
+<text x="450" y="130" text-anchor="middle" font-size="16" font-weight="700" font-family="Segoe UI, Microsoft YaHei, sans-serif" fill="#101828">Collect</text>
+<text x="450" y="150" text-anchor="middle" font-size="12" font-family="Segoe UI, Microsoft YaHei, sans-serif" fill="#667085">收集修复材料</text>
+<rect x="704" y="100" width="180" height="72" rx="14" fill="#fff" stroke="#d0d5dd" stroke-width="1.5"/>
+<text x="794" y="130" text-anchor="middle" font-size="16" font-weight="700" font-family="Segoe UI, Microsoft YaHei, sans-serif" fill="#101828">Try</text>
+<text x="794" y="150" text-anchor="middle" font-size="12" font-family="Segoe UI, Microsoft YaHei, sans-serif" fill="#667085">试补丁</text>
+<rect x="1048" y="100" width="180" height="72" rx="14" fill="#fff" stroke="#d0d5dd" stroke-width="1.5"/>
+<text x="1138" y="130" text-anchor="middle" font-size="16" font-weight="700" font-family="Segoe UI, Microsoft YaHei, sans-serif" fill="#101828">Done</text>
+<text x="1138" y="150" text-anchor="middle" font-size="12" font-family="Segoe UI, Microsoft YaHei, sans-serif" fill="#667085">结束</text>
+<line x1="548" y1="136" x2="702" y2="136" stroke="#101828" stroke-width="2.4" marker-end="url(#ah)"/>
+<text x="626.0" y="124" text-anchor="middle" font-size="13" font-weight="700" font-family="Segoe UI, Microsoft YaHei, sans-serif" fill="#101828">write_fix（自动切）</text>
+</svg>
