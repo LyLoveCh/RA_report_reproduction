@@ -15,7 +15,7 @@ RepairAgent 测绿、循环没绿：Lang 23、Collections 21、Jsoup 48、Jsoup 
 
 > 课程项目，对应 Bouzenia, Devanbu, Pradel, *RepairAgent: An Autonomous, LLM-Based Agent for Program Repair*（ICSE 2025，[arXiv:2403.17134](https://arxiv.org/abs/2403.17134)，DOI `10.1109/ICSE55347.2025.00157`，[官方仓库](https://github.com/sola-st/RepairAgent)）。论文在 Defects4J 全量 835 题上用 GPT-3.5 报出 plausible 186、correct 164。本仓库没有重跑那张表。
 
-课上直接打开 [`evidence/compare_sample10/compare.html`](evidence/compare_sample10/compare.html)。
+课上直接打开 [`evidence/compare_sample10/compare.html`](evidence/compare_sample10/compare.html)。Math 4 的五轮状态机在 [`math4.html`](evidence/compare_sample10/math4.html)。
 
 ## 和论文对照
 
@@ -105,6 +105,26 @@ Chart-1 不在 25 题里。论文 Figure 5 公布的改动是 `if (dataset == nu
 格子从左到右：论文 RepairAgent 是否在 164 个 correct 里、论文 ChatRepair 是否在 162 里、本次循环、本次 RepairAgent。绿 = 本次 plausible，红 = 没过。格子里的数字是轮数。
 
 ![同一 DeepSeek、25 题的逐题结果](evidence/compare_sample10/grid.svg)
+
+### Math 4 逐轮
+
+Math 4 两边都测绿。课堂循环 1 轮、54 秒。RepairAgent 在 `experiment_11` 走了 5 个 cycle，并调用了 `goals_accomplished`。打开 [`math4.html`](evidence/compare_sample10/math4.html) 可以顺着每一轮的工具、thoughts 和补丁看。
+
+Cycle 1 和 Cycle 2 都还在 Understand。`read_range` 不改状态，所以是自环：
+
+![Cycle 1 和 Cycle 2：Understand 上的自环](evidence/compare_sample10/math4/fsm_c1.svg)
+
+Cycle 3，`express_hypothesis` 进入 Collect：
+
+![Cycle 3：Understand 到 Collect](evidence/compare_sample10/math4/fsm_c3.svg)
+
+Cycle 4，`write_fix` 自动进入 Try，测试变绿：
+
+![Cycle 4：Collect 到 Try](evidence/compare_sample10/math4/fsm_c4.svg)
+
+Cycle 5，测绿之后还在 Try。`goals_accomplished` 才进入 Done：
+
+![Cycle 5：Try 到 Done](evidence/compare_sample10/math4/fsm_c5.svg)
 
 跑的时候有两处要单独写：
 
