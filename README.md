@@ -90,7 +90,7 @@ RepairAgent 测绿、循环没绿：Lang 23、Collections 21、Jsoup 48、Jsoup 
 
 ## 结果
 
-数字底稿：[`evidence/compare_sample10/RESULTS.md`](evidence/compare_sample10/RESULTS.md)、[`TOOLS.md`](evidence/compare_sample10/TOOLS.md)。一页总览：[`compare.html`](evidence/compare_sample10/compare.html)。和论文结果的类比：[`PAPER_COMPARISON.md`](evidence/compare_sample10/PAPER_COMPARISON.md)。
+数字底稿：[`evidence/compare_sample10/RESULTS.md`](evidence/compare_sample10/RESULTS.md)、[`TOOLS.md`](evidence/compare_sample10/TOOLS.md)。一页总览：[`compare.html`](evidence/compare_sample10/compare.html)。Math 4 五轮状态机：[`math4.html`](evidence/compare_sample10/math4.html)。和论文结果的类比：[`PAPER_COMPARISON.md`](evidence/compare_sample10/PAPER_COMPARISON.md)。
 
 ### Chart-1 冒烟
 
@@ -216,7 +216,7 @@ bash scripts/watchdog_supervise.sh start
 └── evidence/
     ├── official_pytest.log
     ├── chart1_defects4j.log
-    └── compare_sample10/     compare.html、RESULTS.md、TOOLS.md、图
+    └── compare_sample10/     compare.html、math4.html、RESULTS.md、TOOLS.md、图
 ```
 
 ## 范围

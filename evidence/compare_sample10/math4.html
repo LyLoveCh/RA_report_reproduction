@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <title>Math 4 · experiment_11</title>
+  <style>
+    body { font-family: ui-sans-serif, system-ui, sans-serif; margin: 28px auto; max-width: 980px; color: #101828; background: #fff; }
+    h1 { font-size: 22px; margin: 0 0 8px; }
+    h2 { font-size: 18px; margin: 36px 0 8px; scroll-margin-top: 56px; }
+    p { color: #475467; line-height: 1.55; }
+    code { background: #f2f4f7; padding: 1px 6px; border-radius: 4px; }
+    a { color: #175cd3; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .note { background: #fef3c7; border: 1px solid #fcd34d; padding: 12px 16px; border-radius: 10px; color: #7a4e00; }
+    .note p { margin: 0; color: inherit; }
+    nav { position: sticky; top: 0; background: #fff; padding: 10px 0; border-bottom: 1px solid #e4e7ec; display: flex; flex-wrap: wrap; gap: 12px; font-size: 14px; }
+    .legend { color: #667085; font-size: 13px; }
+    .fsm { display: flex; align-items: center; gap: 10px; margin: 18px 0 8px; flex-wrap: wrap; }
+    .state { min-width: 132px; border: 1px solid #d0d5dd; border-radius: 12px; padding: 12px 14px 10px; background: #fff; text-align: center; }
+    .state b { display: block; font-size: 16px; }
+    .state span { display: block; color: #667085; font-size: 12px; margin-top: 2px; }
+    .state.here { border: 2px dashed #1570ef; }
+    .arrow { color: #101828; font-size: 13px; font-weight: 700; display: flex; flex-direction: column; align-items: center; min-width: 88px; }
+    .arrow i { font-style: normal; font-size: 22px; line-height: 1; }
+    .loop { font-size: 13px; color: #101828; margin: 0 0 -6px 18px; }
+    table { border-collapse: collapse; width: 100%; font-size: 14px; margin: 8px 0 16px; }
+    th, td { border-bottom: 1px solid #e4e7ec; padding: 8px 10px; text-align: left; }
+    th { color: #475467; font-weight: 600; }
+    tr.used { background: #eff8ff; }
+    .thoughts { border-left: 3px solid #1570ef; padding: 8px 14px; color: #344054; background: #f8fafc; }
+    pre { background: #0f172a; color: #e2e8f0; padding: 14px 16px; border-radius: 10px; overflow-x: auto; font-size: 13px; line-height: 1.45; }
+    .label { font-size: 13px; color: #475467; margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+  <h1 id="top">Math 4 · experiment_11 逐轮（DeepSeek，5 cycle）</h1>
+  <p>课上 Experiment 打开这一页。数字只覆盖这一题，<b>不是</b>论文 Table III。</p>
+  <div class="note">
+    <p>四个框始终在。虚线 = 本轮开始时所在状态。加粗箭头 = 满足条件后走的那条边，其余隐去。工具表只列当前静态官方 prompt 里的命令。论文 Fig.2 的 Understand 列的是 <code>run_tests</code> / <code>extract_tests</code> / FL；我们跑的代码把 <code>read_range</code> 放进 Understand，测试焊在 <code>write_fix</code> 里。</p>
+  </div>
+  <p>失败测试两条 NPE：3D <code>testIntersectionNotIntersecting</code>，2D <code>testIntersectionParallel</code>。定位是两处 omission：<code>SubLine.java#114</code> 和 <code>#118</code>。</p>
+
+  <nav>
+    <a href="#c1">C1 read_range</a>
+    <a href="#c2">C2 read_range</a>
+    <a href="#c3">C3 express_hypothesis</a>
+    <a href="#c4">C4 write_fix</a>
+    <a href="#c5">C5 goals_accomplished</a>
+    <a href="#top">回到顶部</a>
+  </nav>
+
+  <h2 id="c1">Cycle 1 · 开始时在 Understand · <code>read_range</code></h2>
+  <p>还在 Understand。先读 3D 的 intersection。<code>read_range</code> 不改状态，所以自环。</p>
+  <p class="legend">虚线框 = 本轮开始时所在状态。加粗箭头 = 本轮走的边。没走的边隐去。</p>
+  <p class="loop">不跳：工具不改状态</p>
+  <div class="fsm">
+    <div class="state here"><b>Understand</b><span>理解 bug</span></div>
+    <div class="state"><b>Collect</b><span>收集修复材料</span></div>
+    <div class="state"><b>Try</b><span>试补丁</span></div>
+    <div class="state"><b>Done</b><span>结束</span></div>
+  </div>
+  <p class="label">本态可用工具（官方 prompt，不是论文 Fig.2 那一列）</p>
+  <table>
+    <tr><th>工具</th><th>干什么</th><th>本轮</th></tr>
+    <tr><td><code>extract_test_code</code></td><td>抽失败测试的源码</td><td></td></tr>
+    <tr><td><code>express_hypothesis</code></td><td>写下假设，跳到 Collect</td><td></td></tr>
+    <tr class="used"><td><code>read_range</code></td><td>读一段源码</td><td>本轮用了</td></tr>
+  </table>
+  <p class="label">模型 thoughts（原文）</p>
+  <p class="thoughts">The bug is a NullPointerException in SubLine.intersection methods for both 3D and 2D cases. The stack traces indicate that the NPE occurs when calling Line.toSubSpace, which internally calls getAbscissa. This suggests that the intersection method is not handling the case where lines are parallel or not intersecting properly, possibly returning null or not checking for null before calling toSubSpace. To understand the exact code, I need to read the relevant lines in both SubLine.java files. I'll start by reading the 3D SubLine.java around line 114 and the 2D SubLine.java around line 118.</p>
+  <p><b>参数：</b> <code>threed/SubLine.java 100–130</code></p>
+  <p><b>工具返回：</b> 读到 <code>Vector3D v1D = line.intersection(subLine.line);</code> 下一行立刻 <code>toSubSpace(v1D)</code>，中间没有 null 检查。</p>
+
+  <h2 id="c2">Cycle 2 · 开始时在 Understand · <code>read_range</code></h2>
+  <p>假设还没写。继续读 2D，确认是同一处漏检查。仍留在 Understand。</p>
+  <p class="legend">虚线框 = 本轮开始时所在状态。加粗箭头 = 本轮走的边。没走的边隐去。</p>
+  <p class="loop">不跳：工具不改状态</p>
+  <div class="fsm">
+    <div class="state here"><b>Understand</b><span>理解 bug</span></div>
+    <div class="state"><b>Collect</b><span>收集修复材料</span></div>
+    <div class="state"><b>Try</b><span>试补丁</span></div>
+    <div class="state"><b>Done</b><span>结束</span></div>
+  </div>
+  <p class="label">本态可用工具（官方 prompt，不是论文 Fig.2 那一列）</p>
+  <table>
+    <tr><th>工具</th><th>干什么</th><th>本轮</th></tr>
+    <tr><td><code>extract_test_code</code></td><td>抽失败测试的源码</td><td></td></tr>
+    <tr><td><code>express_hypothesis</code></td><td>写下假设，跳到 Collect</td><td></td></tr>
+    <tr class="used"><td><code>read_range</code></td><td>读一段源码</td><td>本轮用了</td></tr>
+  </table>
+  <p class="label">模型 thoughts（原文）</p>
+  <p class="thoughts">The 3D SubLine.intersection method calls line.intersection(subLine.line) which may return null if the lines are parallel or not intersecting. Then it immediately calls line.toSubSpace(v1D) without checking if v1D is null, leading to NullPointerException. The fix should be to check if v1D is null and return null early. Similarly, the 2D version likely has the same issue. I need to read the 2D SubLine.java to confirm.</p>
+  <p><b>参数：</b> <code>twod/SubLine.java 100–130</code></p>
+  <p><b>工具返回：</b> 2D 同样：<code>Vector2D v2D = line1.intersection(line2);</code> 然后 <code>toSubSpace(v2D)</code>，没有 null 检查。</p>
+
+  <h2 id="c3">Cycle 3 · 开始时在 Understand · <code>express_hypothesis</code></h2>
+  <p>材料够了。<code>express_hypothesis</code> 的条件成立，Understand → Collect。</p>
+  <p class="legend">虚线框 = 本轮开始时所在状态。加粗箭头 = 本轮走的边。没走的边隐去。</p>
+  <div class="fsm">
+    <div class="state here"><b>Understand</b><span>理解 bug</span></div>
+    <div class="arrow"><span>express_hypothesis</span><i>→</i></div>
+    <div class="state"><b>Collect</b><span>收集修复材料</span></div>
+    <div class="state"><b>Try</b><span>试补丁</span></div>
+    <div class="state"><b>Done</b><span>结束</span></div>
+  </div>
+  <p class="label">本态可用工具（官方 prompt，不是论文 Fig.2 那一列）</p>
+  <table>
+    <tr><th>工具</th><th>干什么</th><th>本轮</th></tr>
+    <tr><td><code>extract_test_code</code></td><td>抽失败测试的源码</td><td></td></tr>
+    <tr class="used"><td><code>express_hypothesis</code></td><td>写下假设，跳到 Collect</td><td>本轮用了</td></tr>
+    <tr><td><code>read_range</code></td><td>读一段源码</td><td></td></tr>
+  </table>
+  <p class="label">模型 thoughts（原文）</p>
+  <p class="thoughts">Both 3D and 2D SubLine.intersection methods call line.intersection() which can return null when lines are parallel or not intersecting. They then immediately use the result without null check, causing NullPointerException. The fix is to add a null check after computing the intersection point and return null if it's null. This is a simple fix.</p>
+  <p><b>参数：</b> <code>null after line.intersection() → NPE in toSubSpace(); add null check</code></p>
+  <p><b>工具返回：</b> Command express_hypothesis returned: state changed from 'collect information to understand the bug' to 'collect information to fix the bug'.</p>
+
+  <h2 id="c4">Cycle 4 · 开始时在 Collect · <code>write_fix</code></h2>
+  <p>没有再搜仓库。直接 <code>write_fix</code>。官方实现会自动切到 Try，并跑测试。</p>
+  <p class="legend">虚线框 = 本轮开始时所在状态。加粗箭头 = 本轮走的边。没走的边隐去。</p>
+  <div class="fsm">
+    <div class="state"><b>Understand</b><span>理解 bug</span></div>
+    <div class="state here"><b>Collect</b><span>收集修复材料</span></div>
+    <div class="arrow"><span>write_fix（自动切）</span><i>→</i></div>
+    <div class="state"><b>Try</b><span>试补丁</span></div>
+    <div class="state"><b>Done</b><span>结束</span></div>
+  </div>
+  <p class="label">本态可用工具（官方 prompt，不是论文 Fig.2 那一列）</p>
+  <table>
+    <tr><th>工具</th><th>干什么</th><th>本轮</th></tr>
+    <tr><td><code>search_code_base</code></td><td>按关键词搜仓库</td><td></td></tr>
+    <tr><td><code>get_classes_and_methods</code></td><td>列出文件里的类和方法</td><td></td></tr>
+    <tr><td><code>extract_similar_functions_calls</code></td><td>找相似调用</td><td></td></tr>
+    <tr><td><code>extract_method_code</code></td><td>抽出某个方法</td><td></td></tr>
+    <tr class="used"><td><code>write_fix</code></td><td>写补丁并自动测，跳到 Try</td><td>本轮用了</td></tr>
+    <tr><td><code>read_range</code></td><td>再读一段源码</td><td></td></tr>
+    <tr><td><code>AI_generates_method_code</code></td><td>另写一个方法体</td><td></td></tr>
+  </table>
+  <p class="label">模型 thoughts（原文）</p>
+  <p class="thoughts">I have a clear hypothesis: the intersection methods in both 3D and 2D SubLine classes do not check if the result of line.intersection() is null before using it, leading to NullPointerException. The fix is to add a null check and return null if the intersection point is null. I will now implement this fix in both files.</p>
+  <p><b>参数：</b> <code>insert null-check at 3D:114 and 2D:118</code></p>
+  <p><b>工具返回：</b> 0 failing test cases. Note: automatically switched to 'trying out candidate fixes'.</p>
+  <p>写进去的补丁：</p>
+  <ul>
+    <li><code>threed/SubLine.java:114  if (v1D == null) return null;</code></li>
+    <li><code>twod/SubLine.java:118   if (v2D == null) return null;</code></li>
+  </ul>
+
+  <h2 id="c5">Cycle 5 · 开始时在 Try · <code>goals_accomplished</code></h2>
+  <p>测已经绿了，但还在 Try。模型自己喊 <code>goals_accomplished</code>，才进 Done。绿不会自动结束。</p>
+  <p class="legend">虚线框 = 本轮开始时所在状态。加粗箭头 = 本轮走的边。没走的边隐去。</p>
+  <div class="fsm">
+    <div class="state"><b>Understand</b><span>理解 bug</span></div>
+    <div class="state"><b>Collect</b><span>收集修复材料</span></div>
+    <div class="state here"><b>Try</b><span>试补丁</span></div>
+    <div class="arrow"><span>goals_accomplished</span><i>→</i></div>
+    <div class="state"><b>Done</b><span>结束</span></div>
+  </div>
+  <p class="label">本态可用工具（官方 prompt，不是论文 Fig.2 那一列）</p>
+  <table>
+    <tr><th>工具</th><th>干什么</th><th>本轮</th></tr>
+    <tr><td><code>write_fix</code></td><td>再写一版补丁</td><td></td></tr>
+    <tr><td><code>read_range</code></td><td>再读代码</td><td></td></tr>
+    <tr><td><code>go_back_to_collect_more_info</code></td><td>退回 Collect</td><td></td></tr>
+    <tr><td><code>discard_hypothesis</code></td><td>丢掉假设，退回 Understand</td><td></td></tr>
+    <tr class="used"><td><code>goals_accomplished</code></td><td>喊下班，进入 Done</td><td>本轮用了</td></tr>
+  </table>
+  <p class="label">模型 thoughts（原文）</p>
+  <p class="thoughts">The fix was applied successfully and all test cases passed. The null check added to both 3D and 2D SubLine.intersection methods resolved the NullPointerException. The bug is fixed.</p>
+  <p><b>参数：</b> <code>null check fixed NPE; all tests passed</code></p>
+  <p><b>工具返回：</b> agent 停。plausible=yes，goals_accomplished=true。</p>
+  <p>对照：同一题的课堂 CR-loop 1 轮就写出同一个 null check。RA 多出来的 4 轮是读文件、写假设、再喊 Done。</p>
+</body>
+</html>
